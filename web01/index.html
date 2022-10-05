@@ -26,20 +26,51 @@
     <link rel="stylesheet" href="./css/reset.css">
     <style>
         /*header.css*/
-        .hd { width: 100%; position:none; top:0; left: 0; z-index: 999; background-color: #fff; height: 142px; }
-        .hd:hover {background-color: transparent;}
-        .hd_wrap {width: 1200px; margin: 0 auto;} //*위아래, 좌우마진*//
-        .logo { display: block; width: 148px; height: auto; margin-top: 40px; margin-bottom: 40px; float: left; }
-        .logo_img { display: block; width: 100%; } //*로고크기100%*//
-        .tnb { float: right; margin-top: 40px; margin-bottom: 40px;}
-        .gnb { float:}
+    .hd { width: 100%; position:fixed; top: 0; left: 0; z-index:91; background-color: #fff; height: 142px; height: 122px; position: absolute; }
+    .hd:hover { background-color: transparent; }
+    .hd_wrap { width: 1200px; margin: 0 auto;}
+    .logo { display:block; width:100px; height:auto; margin-top:40px; margin-bottom: 40px; float:left; }
+    .logo img { display:block; width: 100px; height: auto; }
+    .tnb { float:right; margin-top: 40px; margin-bottom: 40px; }
+    .tnb a { font-size:12px; color:#333; padding: 1.5em; }
+    .tnb a:hover { font-weight:700; text-decoration: underline; color: salmon; }
+    /*방법 1: logo/tnb/gnb 한 줄로 배치 */
+    .gnb { float: left; width: 704px; margin-left: 50px; margin-right: 50px; margin-top: 10px;}
+    /*방법 2: gnb만 밑으로 내릴 경우에
+    .gnb {clear: both; width: 100%;} */
+    .gnb::after {content: ""; display: block; clear: both;} /*클리어픽스clear-fix 처리/ 크기 잡아줌*/
+    .gnb > ul::after {content: ""; display: block; clear: both;}
+    .gnb > ul > li { float: left; width: 20%; height: 40px; line-height: 40px; position: relative}
+    .gnb .dp1 { display: block; color: #333; text-align: center; background-color: eee; font-size: 16;}
+    .gnb li:hover .dp1 { background-color: #333; color: white; }
+    .gnb .sub {display:none; position: absolute; width: 100%; height: auto; background-color: #ccc; top:40px; left:0; z-index: 90px; height: 124px;}
+/*    .gnb .sub {display: none; width: 100%; height: auto;}*/
+.gnb:hover li .sub {display: block}
+    /* .gnb li { float:left; } */
+    .gnb li .sub li { clear:both; height: 30px; line-height: 50px; border-bottom: 1px solid#fff;}
+    .gnb li .sub li a{ background-color: #ccc; color: #111; font-size: 14px; display: block; text-indent: 2em; 
+        overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    .gnb .lu:hover .sub{display: block; z-index: 90px; top: 40px; left: 0;}
+       .gnb li .sub li:hover a {color: deepskyblue;}
+
+
+    .vs {clear: both; width: 100%; height: 100vh; overflow: hidden;} /*100vh현재 기기에 크기에 맞게*/
+    .vdo { display: block; width: 100%; height: auto;}
+    .content {clear : both; width: 100%;}
+    .page {clear:both; width: 100px;}
+    .page_wrap {width: 1200px; margin: 0 auto;}
+    #page1, #page3 {background-color: #eee;}
+    .page_tit {text-align: center; font-size: 32; padding-top: 1.2em; padding-bottom: 0.8em;}
+    .lst {clear:both; width: 1200px;}
+    .lst::after {content:""; display: block; clear: both;} 
+
     </style>
 </head>
 <body>
 <div class="wrap">
     <header class="hd">
         <div class="hd_wrap">
-            <a href="" class="logo"><img src="img/CJ_logo.png" weight=148px; alt="로고"></a>
+            <a href="" class="logo"><img src="img/CJ_logo.png" alt="로고"></a>
             <nav class="tnb">
                 <a href="login.html">로그인</a>
                 <a href="join.html">회원가입</a>
@@ -66,9 +97,9 @@
                     <li class="item3">
                         <a href="" class="dp1">Sustainability</a>
                         <ul class="sub">
-                            <li><a href="susta.html#page1">ESG 지향점</a></li>
-                            <li><a href="susta.html#page2">ESG 성과</a></li>
-                            <li><a href="susta.html#page3">ESG 보고서</a></li>
+                            <li><a href="susta.html#page1">지향점</a></li>
+                            <li><a href="susta.html#page2">성과</a></li>
+                            <li><a href="susta.html#page3">보고서</a></li>
                         </ul>
                     </li>
                     <li class="item4">
@@ -93,18 +124,16 @@
     </header>
     <div class="content">
         <figure class="vs">
-            <video src="" class="vdo"></video>
+            <video src="img/cj video.mp4" class="vdo"></video>
         </figure>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">#LIVE NEW CJ<br>당신의 평범한<br> 일상을 새롭게</h2>
+                <h2 class="page_tit">#LIVE NEW CJ<br>당신의 평범한 일상을 새롭게</h2>
 
                 <ul class="lst">
                     <li class="left">
-                        <iframe src="" frameborder="0"></iframe>
-                                    </li>
-                                    <iframe width="800" height="600" src="https://www.youtube.com/embed/gUQEWY4M8v0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       
+                     </li>
+                     <iframe width="800" height="600" src="https://www.youtube.com/embed/gUQEWY4M8v0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <li class="right">
                         <ul class="ico_lst">
                             <li>
