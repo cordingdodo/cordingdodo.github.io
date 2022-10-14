@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ 그룹</title>
+    <!-- 메타포 -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- 오픈그래프 -->
+    <meta property="og:site_name" content="WE DISPLAY">
+    <meta property="og:title" content="WE DISPLAY">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요.">
+    <meta property="og:image" content="./img/icon/share.png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favi.png">
+    <!-- 각 종 플러그인과 설정 파일 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- 구형 브라우저 html5태그 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- 구형 브라우저에서 css animation 인식 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- jquery 플러그인 연결 -->
+    <script src="./js/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="header.css">
+    <style>
+    * { margin: 0; padding: 0; }
+    body, html { width: 100%; }
+    ul { list-style: none; }
+    a { text-decoration: none;}
+        /*header.css*/
+
+    /*content*/
+    .vs {clear: both; width: 100%; height: 300px; overflow: hidden;}
+    .vs img{display: block; width: 100%; height: auto;}
+    .bread { clear: both; width: 100%; height: auto; line-height: 60px; border-bottom: 3px solid #eee;}
+    .bread_fr {width: 1200px; margin: 0 auto;}
+    .page {clear: both; width: 100%; min-height: 100vh;}
+    .page::after {content: ""; display: block; clear: both;}
+    .page_wrap {width: 1200px; margin: 0 auto;}
+
+    .page_title { padding-top: 1em; font-size: 30px; }
+    .home { color: #333;}   
+
+    .frm { border: 2px solid #333; padding: 30px; width: 600px; margin: 50px auto;} 
+    .frm_tb {display:table; margin: 45px auto;}
+    .frm_tb tr { display: table-row;}
+    .frm_tb td, .frm_tb th {display: table-cell;}
+    .frm_tb th {width: 200px; height: 48px; }
+    .frm_tb td {width: 300px; height: 48px; }
+    .frm_tb label::before {content: "*";}
+
+    .in_dt { background-color: #fff; height: 30px; line-height: 30px; width: 280px;
+    color: rgb(73, 73, 73); font-size: 15px; text-indent: 0.5em;}
+    .in_btn {display: block; background-color: #333; min-width: 120px; height: 30px;
+    line-height: 30px; border-radius: 20px; float: left; margin-left: 100px; 
+    margin-right: 0px; cursor: pointer;}
+    .in_btn:hover  {background-color: darkkhaki;}
+
+    .frm_tb {display: table;}
+    .frm_tb li {display: table-row;}
+    .frm_tb .td, .frm_tb, .frm_tb .td2 {display: table-cell;}
+    .frm_tb .th {width: 200px;}
+    .frm_tb .td {width: 200px;}
+    .frm_tb .td2 {width: 200px;}
+    </style>
+    <link rel="stylesheet" href="footer.css">
+    <script>
+    $(document).ready(function(){
+        $(".to_top").attr("href", location.href);
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=300){
+                $(".to_top").addClass("on");
+                $(".to_top").attr("href", location.href);
+            } else {
+                $(".to_top").removeClass("on");
+                $(".to_top").attr("href", location.href); 
+            }
+        });
+    });    
+        </script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="index.html" class="logo"><img src="img/CJ_logo.png" alt="로고"></a>
+            <nav class="tnb">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+                <a href="sitemap.html">사이트맵</a>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li class="item1">
+                        <a href="" class="dp1">CJ Now</a>
+                    <li class="item2">
+                        <a href="" class="dp1">Brand</a>
+                        <ul class="sub">
+                            <li><a href="brand.html#page1">Best brand</a></li>
+                            <li><a href="brand.html#page2">건강</a></li>
+                            <li><a href="brand.html#page3">즐거움</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dp1">Sustainability</a>
+                        <ul class="sub">
+                            <li><a href="susta.html#page1">지향점</a></li>
+                            <li><a href="susta.html#page2">성과</a></li>
+                            <li><a href="susta.html#page3">보고서</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="" class="dp1">CJ소개</a>
+                        <ul class="sub">
+                            <li><a href="company.html#page1">회사소개</a></li>
+                            <li><a href="company.html#page2">회사연혁</a></li>
+                            <li><a href="company.html#page3">계열사</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="" class="dp1">인재 채용</a>
+                        <ul class="sub">
+                            <li><a href="job.html1#page1">채용공고</a></li>
+                            <li><a href="job.html1#page2">직무정보</a></li>
+                            <li><a href="job.html1#page3">게시판</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <figure class="vs">
+            <imc src="./img/4.png" alt="비주얼">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <span class="sel">로그인</span>
+                
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">로그인</h2>
+                <div class="form_fr">
+                    <form name="frm1" action="" method="post" id="loginform" class="frm">
+                        <table class="frm_tb">
+                            <tbody>
+                                <tr>
+                                    <th><label for="id">아이디</label></th>
+                                    <td>
+                                        <input type="text" id="id" name="id" class="in_dt" required autofocus>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="id">비밀번호</label></th>
+                                    <td>
+                                        <input type="password" id="pw" name="pw" class="in_dt" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                <button type="submit" class="in_btn">로그인</button>
+                                <button type="reset" class="in_btn">취소</button>
+                                    </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            </section>
+            </div>
+        </section>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_logo"><img src="img/CJ_logo.png" alt=""></div>
+            <div class="mid_box">
+                <nav class="fnb">
+                    <a href="member01.html" class="dpc"> 개인정보 처리 방침</a>
+                    <a href="member02.html" class="dpc"> 이용약관</a>
+                    <a href="member03.html" class="dpc"> 공지사항</a>
+                    <a href="member04.html" class="dpc"> 온라인제보</a>
+                    <a href="member05.html" class="dpc"> 고객센터</a>
+                </nav>
+                <p class="addr">
+                    CJ 그룹 | 대표이사 | 정호영 사업자등록번호:120-81-55297<br>
+                    서울시 영등포구 여의대로 128 LG 트윈타워 |admin@wedisplay.solutions<br>
+                    통신판매업신고번호: 제2022-서울영등포-1247호<br>
+                    당 사는 통신판매중개자이며, 통신 판매의 당사자가 아닙니다. 상품 및 거래에 관한 의무와 책임은 판매자에게 있습니다.  
+                </p>
+                <p class="copyright">씨제이㈜. All Rights Reserved.</p>
+            </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">패밀리 사이트</option>
+                    <option value="https://www.cjenm.com/ko/">Cj ENM 엔터테인먼트</option>
+                    <option value="https://www.oliveyoung.co.kr">>CJ올리브영</option>
+                    <option value="https://www.cj.co.kr/kr/index">CJ제일제당</option>
+                    <option value="https://www.cjfoodville.co.kr/main.asp">CJ푸드빌</option>
+                    <option value="http://www.cjfreshway.com/index.jsp">CJ 제일제당</option>
+                    <option value="https://www.cj.co.kr/kr/index">CJ프레시웨이</option>
+                    <option value="http://www.cj.co.kr/kr/about/business/bio">CJ제일제당 BIO사업부문</option>
+                    <option value="https://www.cjlogistics.com/ko/main">CJ대한통운</option>
+                    <option value="https://www.cjolivenetworks.co.kr/">CJ올리브네트웍스</option>
+
+                </select>
+            </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

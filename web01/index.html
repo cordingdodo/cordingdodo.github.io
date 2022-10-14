@@ -7,60 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cj 그룹</title>
     <!-- 메타포 -->
-    <meta name="description" content="위 디스플레이에서 다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요."/>
-    <meta name="keywords" content="WE DISPALY, 위디스플레이, 디스플레이, DISPLAY, 디스플레이그라운드, 디스플레이 플랫폼, 설치 사례, 견적 문의, 키오스크, 전자칠판, 전광판, DID모니터, 사이니지, 미디어파사드, 파사드, LED스크린, 비디오월, OLED, LED, LCD, 투명OLED, 투명디스플레이, 터치모니터, 광고판">
+    <meta name="description" content="."/>
+    <meta name="keywords" content="">
     <!-- 오픈그래프 -->
     <meta property="og:site_name" content="WE DISPLAY" />
     <meta property="og:title" content="WE DISPLAY" />
     <meta property="og:url" content="/" />
     <link rel="canonical" href="https://wedisplay.solutions" />
-    <meta name="description" content="위 디스플레이에서 다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요."/>
-    <meta name="keywords" content="WE DISPALY, 위디스플레이, 디스플레이, DISPLAY, 디스플레이그라운드, 디스플레이 플랫폼, 설치 사례, 견적 문의, 키오스크, 전자칠판, 전광판, DID모니터, 사이니지, 미디어파사드, 파사드, LED스크린, 비디오월, OLED, LED, LCD, 투명OLED, 투명디스플레이, 터치모니터, 광고판">
+    <meta name="description" content=""/>
+    <meta name="keywords" content="">
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요." />
+    <meta property="og:description" content="" />
     <meta property="og:image" content="https://wedisplay.solutions/@resource/share.png">
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="400" />
     <!-- 파비콘 -->
     <!-- 각 종 플러그인과 설정 파일 -->
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./cs/reset.css">
+    <link rel="stylesheet" href="header.css">
     <style>
     * { margin: 0; padding: 0; }
     body, html { width: 100%; }
     ul { list-style: none; }
     a { text-decoration: none;}
         /*header.css*/
-    .hd { width: 100%; height: 122px;  position:absolute; top: 0; left: 0; z-index:91; }
-    /* .hd:hover { background-color: transparent; } */
-    .hd_wrap { width: 1200px; margin: 0 auto; }
-    .logo { display:block; width:144px; height:auto; margin: 30px 0px; float:left; }
-    .logo img { display:block; width: 100px; height: auto; }
-    .tnb { float:right; margin: 30px 0px; }
-    .tnb a { font-size:12px; color:#333; padding: 1.5em; }
-    .tnb a:hover { font-weight:700; text-decoration: underline; color: salmon; text-decoration-style:dotted;}
-    /*방법 1: logo/tnb/gnb 한 줄로 배치 */
-    /* .gnb { float: left; width: 1200px; margin-left: 50px; margin-right: 50px; margin-top: 10px; color: #ccc;} */
-    /*방법 2: gnb만 밑으로 내릴 경우에*/
-    .gnb {clear: both; width: 100%;}
-    .gnb::after {content: ""; display: block; clear: both;} /*클리어픽스clear-fix 처리/ 크기 잡아줌*/
-    .gnb > ul::after {content: ""; display: block; clear: both;}
-    .gnb > ul > li { float: left; width: 20%; height: 40px; line-height: 40px; position: relative}
-    .gnb .dp1 { display: block; color: #333; text-align: center; background-color: #eee; font-size: 16px;}
-    .gnb li:hover .dp1 { background-color: #fff; color: white; }
-    .gnb .sub { display:none; width: 100%; height:auto; position:absolute; top:40px; background-color:#ccc;
-    left: 0; z-index:90; height: 124px; }
-/*    .gnb .sub {display: none; width: 100%; height: auto;}*/
-    /* .gnb li { float:left; } */
-    .gnb:hover li .sub { display:block;}
-    .gnb li .sub li { clear:both; height: 30px; line-height: 30px; border-bottom: 1px solid#fff;}
-    .gnb li .sub li a{ background-color: #ccc; color: #111; font-size: 14px; 
-        display: block; text-indent: 2em; overflow: hidden; white-space: nowrap; 
-        text-overflow: ellipsis;}
-    .gnb .lu:hover .sub{display: block; z-index: 90px; top: 40px; left: 0;} /*흠*/
-    .gnb li .sub li:hover a {color: deepskyblue;}
-    .content {clear : both; width: 100%;} /*이거 100%해야 배경색*/
-    .vs {clear: both; width: 100%; height: 100vh; overflow: hidden;} /*100vh현재 기기에 크기에 맞게*/
-    .vdo { display: block; width: 100%; height: auto;}
 
     /*content*/
     .page {clear:both; width: 100%; }
@@ -112,23 +82,10 @@
     .circle_lst li a img {display: block; width: 160px; height: auto; position: absolute; 
         top: 50%; z-index:11; margin-top: -100; left: 20px;}  /*마진탑으로 사진 위치 조절*/
 
-    /* footer*/
-    .ft { clear:both; width: 100%; height: 200px; padding-bottom: 50px; }
-    .ft_wrap {clear:both; width: 1200px; margin: 0 auto; padding-top: 50px; padding-bottom: 50px; }
-    .ft_wrap:after {content: ""; display: block; clear: both;} /*클리어픽스: 크기변경안될때도와줌*/
-    .ft_logo {float:left; width: 120px;}
-    .mid_box {float:left; width: 750px; padding-left: 50px;}
-    .fnb { clear: both;}
-    .fnb a { color: black; font-size: 14px; padding: 24px;}
-    .fnb a.dpc { color:#f0d0ce; }
-    .addr {padding-left: 24px; color:rgb(98, 98, 98); padding-top: 20px; font-style: 12px; 
-        line-height: 2;}
-    .sel_box {float:right; border-bottom: 1px solid #fff; height: 44px; line-height: 44px; 
-        text-align: center; width: 140px;}
-    #sel { border: none; outline: none; background-color: transparent; color: rgb(104, 104, 104);}
-    .copyright {padding-top: 10; padding-left: 24px; color:#555555; padding-top: 20px; font-size: 12px;}
-    #sel option { color:#333; }
+    /* footer.css*/
+
     </style>
+    <link rel="stylesheet" href="footer.css">
     <script>
         $(document).ready(function(){
             $(window).scroll(function(){
@@ -251,7 +208,7 @@
                         <a href="">
                             <img src="img/1.jfif" alt="CJ올리브네트웍스" class="pic">
                             <div class="hv_box">
-                                <h3 class="pic_tit">CJ올리브네트웍스, 비마이프렌즈와 크리<br>에이터 이코노미 생태계 확장에 나선다</h3>
+                                <h3 class="pic_tit">CJ올리브네트웍스, 비마이프렌즈와 크리에이터 이코노미 생태계 확장에 나선다</h3>
                                 <p class="pic_com">#창작자 #비마이프렌즈 #비스테이지</p>
                             </div>
                         </a>
@@ -260,7 +217,7 @@
                         <a href="">
                             <img src="img/1.jpeg"  alt="CJ프레시웨이" class="pic">
                             <div class="hv_box">
-                                <h3 class="pic_tit">CJ프레시웨이, '브랜드 솔루션' 사업 본격 추<br>진.. 고객사 외식 브랜드 론칭 돕는다</h3>
+                                <h3 class="pic_tit">CJ프레시웨이, '브랜드 솔루션' 사업 본격 추진.. 고객사 외식 브랜드 론칭 돕는다</h3>
                                 <p class="pic_com">#브랜드론칭 #두가지컴퍼니 #밥앤동</p>
                             </div>
                         </a>
@@ -269,7 +226,7 @@
                         <a href="">
                             <img src="img/3.jpg" alt="KCON" class="pic">
                             <div class="hv_box">
-                                <h3 class="pic_tit">KCON, 중동 사우디아라비아 간다! CJ ENM, <br>
+                                <h3 class="pic_tit">KCON, 중동 사우디아라비아 간다! CJ ENM, 
                                     ‘KCON 2022 SAUDI ARABIA’ 9월 3</h3>
                                 <p class="pic_com">#케이콘 #중동 #사우디아라비아</p>
                             </div>

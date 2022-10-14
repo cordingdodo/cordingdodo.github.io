@@ -1,0 +1,48 @@
+    .page {clear:both; width: 100%; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+    #page1 { background-color:#daf8e8; }
+    #page2 { background-color: #edf9f7;}
+    #page3 { background-color:#faf2fe; }
+    .page_tit {text-align: center; font-size: 32; padding-top: 100px; padding-bottom: 80px;}
+    .lst { clear:both; width: 1200px; }
+    .lst::after {content:""; display: block; clear: both;} 
+    .lst li {margin-bottom: 40px;}
+    .lst li.left { float:left; width: 816px;height: 459px;}
+    .lst li.right { float:right; width: 350px; height: 459px; }
+    .ico_lst {clear: both; width: 100%; overflow: hidden;}
+    .ico_lst li a { background-repeat: no-repeat; background-position:0 center; 
+        display: block; background-size: auto 80%; padding-left: 100px;} /*dispaly:block 하면 아이콘 나옴*/
+    .ico_lst li a.icon1 {background-image: url("./icon/icon1.png"); }
+    .ico_lst li a.icon2 {background-image: url("./icon/icon2.png");}
+    .ico_lst li a.icon3 {background-image: url("./icon/icon3.png"); }
+    .cate_tit { color: #222; padding-bottom: 0.5em; font-size: 20px;}
+    .cate_com { color: #222; font-size: 14px; white-space:nowrap; text-overflow: ellipsis; overflow: hidden;}
+    /* overflow: hidden글 ...으로 */
+    
+
+
+    .pic_lst {clear: both; width: 100%; padding-bottom: 50px;} /*밑에 공백*/
+    .pic_lst:after { content: ""; display: block; clear: both;}
+    .pic_lst li {float: left; position: relative; margin-bottom: 40px;}
+    .pic_lst li a {display: block; width: 360px; margin-right: 40px; overflow: hidden; height: 300px;} 
+    /*오버플로우히든 오버범위 짜름*/
+    /* .pic_lst li:nth-child(2) a {height: 360px;} */
+    .pic_lst li a img { display: block;  width: 600px; margin-left: -120px; transition-duration: 0.8s;} /*마진레프트 -넣으면 반대로*/
+    .pic_lst li a:hover img { margin-left: 0;} /*마우스 커서 올리면 이미지 나옴*/
+    .pic_lst li a .hv_box { width: 360px;height: 300px; color: #fff; opacity: 0;  position:absolute;
+        top:0; left: 0px; z-index: 10; transition-duration: 0.8s; background-color: transparent;}
+    .pic_lst li a:hover .hv_box {opacity: 1;} /*사진 안에 글자 보임*/
+    .pic_tit {top:30px; left: 30px; position:absolute;}
+    .pic_com {position:absolute; right: 30px; bottom: 30px; text-shadow:0px 0px 3px #333;}
+
+    #page3 {background-repeat: no-repeat;background-size: cover; background-position: center center; 
+        height: 100vh; overflow: hidden; } /*오버플로우 히든 여기까지만  */ 
+    #page3 .page_wrap {width: 100%;}
+    .circle_lst {clear: both; width: 5200px; margin-top: 80px; }
+    .circle_lst li { width: 200px; height: 200px; position:relative; border-radius:120px; overflow:hidden; 
+        background-color: #fff;     float:left; margin:28px;  }
+    .circle_lst.lst2 li { float:right; }
+    .circle_lst.lst2 li {float:right; }
+    .circle_lst li a {display: block; width: 100%; height: 100%;}
+    .circle_lst li a img {display: block; width: 160px; height: auto; position: absolute; 
+        top: 50%; z-index:11; margin-top: -100; left: 20px;}  /*마진탑으로 사진 위치 조절*/
