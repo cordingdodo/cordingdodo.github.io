@@ -43,14 +43,42 @@
         .page { clear:both; width: 100%; min-height:100vh;}
         .page:after { content:""; display:block; clear:both; }
         .page_wrap { width: 1200px; margin: 0 auto; }
-        .content { display:none; }
-        .content:target { display:block; }
-    
-        .page_title { padding-top: 1em; font-size: 30px; }
+        .page_title { padding-top: 1em; font-size: 80px; text-align: center;}
+
+
+
+        #page2 { background-color: #fff;}
+        .pic_lst::after {content: ""; display: block; clear: both;}
+        .pic_lst {margin-left: 130px; clear:both; width: 100%;padding-top: 50px;}
+        .pic_lst li {float: left; position:relative; margin-bottom: 40px;}
+        .pic_lst a {display: block; width: 500px; height: 500px;  overflow:hidden; }
+        .pic_lst li a img { display: block; height: 600px; width: 600px; margin-left: -120px; transition-duration: 0.8s;}
+        .pic_lst li a:hover img {margin-left: 0;}
+        .pic_lst li a .hv_box {width: 300px; height: 300px; color: #333; opacity: 0; position: absolute;
+        top:0; left: 0px; z-index: 10; transition-duration: 0.8s; background-color: transparent;}
+        .pic_lst li a:hover .hv_box {opacity: 30;}
+        .pic_com { margin-left: 30px; top: 80px; left: 30px; position: absolute; color: #fff;}
+        .pic_tit { margin-left: 30px; top: 20px; left: 30px; position: absolute; font-size: 30pt; color: #fff;}
+
+        .pic_lst2::after {content: ""; display: block; clear: both;}
+        .pic_lst2 {margin-left: 130px; clear:both; width: 100%;padding-top: 50px;}
+        .pic_lst2 li {float: left; position:relative; margin-bottom: 40px;}
+        .pic_lst2 a {display: block; width: 500px; height: 500px;  overflow:hidden; }
+        .pic_lst2 li a img { display: block; height: 600px; width: 600px; margin-left: -120px; transition-duration: 0.8s;}
+        .pic_lst2 li a:hover img {margin-left: 0;}
+        .pic_lst2 li a .hv_box {width: 300px; height: 300px; color: #333; opacity: 0; position: absolute;
+        top:0; left: 0px; z-index: 10; transition-duration: 0.8s; background-color: transparent;}
+        .pic_lst2 li a:hover .hv_box {opacity: 30;}
+        .pic_com { margin-left: 30px; top: 80px; left: 30px; position: absolute;}
+        .pic_tit { margin-left: 30px; top: 20px; left: 30px; position: absolute; font-size: 30pt;}
+
+
         .home { color:#333; }
         .to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
         background-color:rgba(11,11,11,0.75); color:#fff; display:block; width: 60px;
         height: 60px; line-height: 60px; text-align: center; font-size:20px; border-radius:32px; visibility:hidden; transition-duration:0.8s; }
+
+
         .to_top:hover { background-color: deepskyblue; }
         .to_top.on { visibility: visible; }
         </style>
@@ -146,6 +174,87 @@
         <section class="page">
             <div class="page_wrap">
                 <h2 class="page_title">Best Brand</h2>
+                <h3 class="page_sub">CJ 베스트 브랜드는 ‘건강, 즐거움, 편리를
+                    창조하는 미래 라이프스타일 기업’을 향해 도약하고 있습니다</h3>
+                   <h4 class="page_last">#건강</h4>
+                <ul class="pic_lst">
+                    <h2></h2>
+                    <li>
+                        <a href="">
+                            <img src="../web01/brand/bibigo.jpg" alt="비비고" class="pic">
+                                <div class="hv_box">
+                                    <h3 class="pic_tit">비비고</h3>
+                                    <p class="pic_com">온 정성을 담은 맛</p>
+                                </div>
+                            </img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../web01/brand/bob.jpg" alt="햇반" class="pic">
+                                <div class="hv_box">
+                                    <h3 class="pic_tit">햇반</h3>
+                                    <p class="pic_com">언제나 가장 맛있는 집밥</p>
+                                </div>
+                            </img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../web01/brand/baeksul.png" alt="백설" class="pic">
+                                <div class="hv_box">
+                                    <h3 class="pic_tit">백설</h3>
+                                    <p class="pic_com">1953년부터 지금까지 즐거운 요리일상</p>
+                                </div>
+                            </img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../web01/brand/vips.jpg" alt="VIPS" class="pic">
+                                <div class="hv_box">
+                                    <h3 class="pic_tit">VIPS</h3>
+                                    <p class="pic_com">My No.1 Steakhouse</p>
+                                </div>
+                            </img>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="pic_lst2">
+                    <li>
+                        <a href="">
+                            <img src="../web01/brand/tvn.jpg" alt="tvN" class="">
+                            <div class="hv_box"></div>
+                            <h3 class="pic_tit">tvN</h3>
+                            <p class="pic_com">No.1 K콘텐츠 채널, 즐거움엔 tvN</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../web01/brand/kcon.jpg" alt="kcon" class="pic">
+                            <div class="hv_box"></div>
+                            <h3 class="pic_tit">KCON</h3>
+                            <p class="pic_com">세계 최대의 K-Cultrue</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../web01/brand/mama.jpg" alt="mama" class="pic">
+                            <div class="hv_box"></div>
+                            <h3 class="pic_tit">MAMA</h3>
+                            <p class="pic_com">세계 최고의 KPOP 시상식</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../web01/brand/sup.jpg" alt="pic4" class="pic">
+                            <div class="hv_box"></div>
+                            <h3 class="pic_tit">Mnet</h3>
+                            <p class="pic_com">Music Makes One</p>
+                        </a>
+                    </li>
+                </ul>
             </section>
             </div>
         </section>
@@ -192,7 +301,7 @@
                 </select> &gt; 
                 <select name="sel4" id="sel4" class="sel">
                     <option selected>오시는길</option>
-                    <option value="brand.html#page1">Best brand</option>
+                    <option value="brand.html#page1">인사말</option>
                     <option value="brand.html#page2">건강</option>
                 </select>
             </div>
