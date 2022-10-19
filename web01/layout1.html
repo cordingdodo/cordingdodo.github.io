@@ -47,7 +47,7 @@
         .page_sub { padding-top: 1em; font-size: 15px; text-align: center;}
         .page_last { padding-top: 1em; font-size: 10px; text-align: center;}
 
-        #page2 { background-color: #fff;}
+        .page2 { background-color: rgb(209, 249, 221); clear:both; width: 100%; min-height:100vh;}
         .pic_lst::after {content: ""; display: block; clear: both;}
         .pic_lst {margin-left: 130px; clear:both; width: 100%;padding-top: 50px;}
         .pic_lst li {float: left; position:relative; margin-bottom: 40px;}
@@ -58,12 +58,17 @@
         top:0; left: 0px; z-index: 10; transition-duration: 0.8s; background-color: transparent;}
         .pic_lst li a:hover .hv_box {opacity: 30;}
         .pic_com { margin-left: 30px; top: 80px; left: 30px; position: absolute; color: #fff;}
+        .pic_com2 { margin-left: 30px; top: 80px; left: 30px; position: absolute; color: #333;}
+        .pic_com3 { margin-left: 30px; left: 30px; position: absolute; color: #333;}
         .pic_tit { margin-left: 30px; top: 20px; left: 30px; position: absolute; font-size: 30pt; color: #fff;}
+        .pic_tit2 { position: absolute; font-size: 30pt; color: #333;}
+        .pic_tit3 { position: absolute; font-size: 20pt; color: #333;}
+        .pic_last {clear:both; display: block }
 
         .pic_lst2::after {content: ""; display: block; clear: both;}
-        .pic_lst2 {margin-left: 130px; clear:both; width: 100%;padding-top: 50px;}
+        .pic_lst2 {margin-left: 130px; margin-right: 50px; clear:both; width: 100%;padding-top: 50px;}
         .pic_lst2 li {float: left; position:relative; margin-bottom: 40px;}
-        .pic_lst2 a {display: block; width: 500px; height: 500px;  overflow:hidden; }
+        .pic_lst2 a {display: block; width: 516px; height: 332px;  overflow:hidden; }
         .pic_lst2 li a img { display: block; height: 600px; width: 600px; margin-top: -120px; transition-duration: 0.8s;}
         .pic_lst2 li a:hover img {margin-top: 0;}
         .pic_lst2 li a .hv_box {width: 300px; height: 300px; color: #333; opacity: 0; position: absolute;
@@ -71,6 +76,16 @@
         .pic_lst2 li a:hover .hv_box {opacity: 30;}
         .pic_com { margin-left: 30px; top: 80px; left: 30px; position: absolute;}
         .pic_tit { margin-left: 30px; top: 20px; left: 30px; position: absolute; font-size: 30pt;}
+
+        .pic_lst3::after {content:normal; display: block; clear: both;}
+        .pic_lst3 {margin-left: 0px; clear:both; width: 100%;padding-top: 50px; margin-bottom: 50px;}
+        .pic_lst3 li {float: left; position:relative; margin-bottom: 40px;}
+        .pic_lst3 a {display: block; width: 332px; height: 516px;  overflow:hidden; }
+        .pic_lst3 li a img { display: block; height: 330px; width: 510px; margin-top: -50px; transition-duration: 0.8s;}
+        .pic_lst3 li a:hover img {margin-top: 0;}
+        .pic_lst3 li a .hv_box {width: 300px; height: 300px; color: #333; opacity: 0; position: absolute;
+        top:0; left: 0px; z-index: 10; transition-duration: 0.8s; background-color: transparent;}
+
 
 
         .home { color:#333; }
@@ -126,8 +141,8 @@
                         <a href="" class="dp1">Sustainability</a>
                         <ul class="sub">
                             <li><a href="susta.html#page1">지향점</a></li>
-                            <li><a href="susta.html#page2">성과</a></li>
-                            <li><a href="susta.html#page3">보고서</a></li>
+                            <li><a href="susta.html#page2">윤리경영</a></li>
+                            <li><a href="susta.html#page3">나눔재단</a></li>
                         </ul>
                     </li>
                     <li class="item4">
@@ -258,7 +273,7 @@
             </div>
         </section>
     </div>
-    <div class="content" id="page2">
+    <div class="content" id="page1">
         <figure class="vs">
             <img src="" alt="">
         </figure>
@@ -281,93 +296,102 @@
         </div>
         <section class="page">
             <div class="page_wrap">
-                <h2 class="page_title2">건강</h2>
-                <h3 class="page_sub2">한식의 세계화를 이끄는 건강한 CJ브랜드 입니다 </h3>
-                <ul class="pic_lst">
+                <h2 class="page_title">건강</h2>
+                <h3 class="page_sub">한식의 세계화를 이끄는 건강한 CJ브랜드 입니다 </h3>
+                <ul class="pic_lst3">
                     <li>
                         <a href="">
-                            <img src="비비고로고" alt="비비고" class="pic">
+                            <img src="/web01/brand/health/bibigo.png" alt="비비고" class="pic">
                                 <div class="hv_box">
-                                    <h3 class="pic_tit2">비비고</h3>
-                                    <p class="pic_com2">온 정성을 담은 맛</p>
-                                    <p class="pic_last2">Cj제일제당</p>
+                                    <h3 class="pic_tit3">비비고</h3>
+                                    <p class="pic_com3">온 정성을 담은 맛</p>
+                                    <p class="pic_last">Cj제일제당</p>
                                 </div>
                             </img>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="햇반로고" alt="햇반" class="pic">
+                            <img src="/web01/brand/health/bob.png" alt="햇반" class="pic">
                                 <div class="hv_box">
-                                    <h3 class="pic_tit2">햇반</h3>
-                                    <p class="pic_com2">언제나 가장 맛있는 집밥</p>
-                                    <p class="pic_last2">Cj제일제당</p>
+                                    <h3 class="pic_tit3">햇반</h3>
+                                    <p class="pic_com3">언제나 가장 맛있는 집밥</p>
+                                    <p class="pic_last">Cj제일제당</p>
                                 </div>
                             </img>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="백설로고" alt="백설" class="pic">
+                            <img src="/web01/brand/health/baek.png" alt="백설" class="pic">
                                 <div class="hv_box">
-                                    <h3 class="pic_tit2">백설</h3>
-                                    <p class="pic_com2">1953년부터 지금까지 즐거운 요리일상</p>
-                                    <p class="pic_last2">Cj제일제당</p>
+                                    <h3 class="pic_tit3">백설</h3>
+                                    <p class="pic_com3">1953년부터 지금까지 즐거운 요리일상</p>
+                                    <p class="pic_last">Cj제일제당</p>
                                 </div>
                             </img>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="고메로고" alt="고메" class="pic">
+                            <img src="/web01/brand/health/gome.png" alt="고메" class="pic">
                                 <div class="hv_box">
-                                    <h3 class="pic_tit2">고메</h3>
-                                    <p class="pic_com2">색다른 순간을 만드는 맛</p>
-                                    <p class="pic_last2">Cj제일제당</p>
+                                    <h3 class="pic_tit3">고메</h3>
+                                    <p class="pic_com3">색다른 순간을 만드는 맛</p>
+                                    <p class="pic_last">Cj제일제당</p>
+                                </div>
+                            </img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/web01/brand/health/the.png" alt="the더건강한" class="pic">
+                                <div class="hv_box">
+                                    <h3 class="pic_tit3">The더건강한</h3>
+                                    <p class="pic_com3">색다른 순간을 만드는 맛</p>
+                                    <p class="pic_last">Cj제일제당</p>
+                                </div>
+                            </img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/web01/brand/health/dasida.png" alt="다시다" class="pic">
+                                <div class="hv_box">
+                                    <h3 class="pic_tit3">다시다</h3>
+                                    <p class="pic_com3">고향의 맛, 다시다</p>
+                                    <p class="pic_last">Cj제일제당</p>
+                                </div>
+                            </img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/web01/brand/health/hae.png" alt="해찬들" class="pic">
+                                <div class="hv_box">
+                                    <h3 class="pic_tit3">해찬들</h3>
+                                    <p class="pic_com3">자연의 시간표대로, 해찬들</p>
+                                    <p class="pic_last">Cj제일제당</p>
+                                </div>
+                            </img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/web01/brand/health/peti.png" alt="쁘띠첼" class="pic">
+                                <div class="hv_box">
+                                    <h3 class="pic_tit3">쁘띠첼</h3>
+                                    <p class="pic_com3">라이프스타일 디저트, 쁘띠첼</p>
+                                    <p class="pic_last">Cj제일제당</p>
                                 </div>
                             </img>
                         </a>
                     </li>
                 </ul>
-                    <li>
-                        <a href="">
-                            <img src="더건강한로고" alt="The더건강한" class="">
-                            <div class="hv_box"></div>
-                            <h3 class="pic_tit2">The더건강한</h3>
-                            <p class="pic_com2">건강하게 맛있다. The더건강한</p>
-                            <p class="pic_last2">Cj제일제당</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="다시다로고" alt="다시다" class="pic">
-                            <div class="hv_box"></div>
-                            <h3 class="pic_tit2">다시다</h3>
-                            <p class="pic_com2">고향의 맛, 다시다</p>
-                            <p class="pic_last2">Cj제일제당</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="해찬들로고" alt="해찬들" class="pic">
-                            <div class="hv_box"></div>
-                            <h3 class="pic_tit2">해찬들</h3>
-                            <p class="pic_com2">자연의 시간표대로, 해찬들</p>
-                            <p class="pic_last2">Cj제일제당</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="쁘띠첼로고" alt="쁘띠첼" class="pic">
-                            <div class="hv_box"></div>
-                            <h3 class="pic_tit2">쁘띠첼</h3>
-                            <p class="pic_com2">라이프스타일 디저트, 쁘띠첼</p>
-                            <p class="pic_last2">Cj제일제당</p>
-                        </a>
-                    </li>
             </div>
         </section>
-    </div>  <div class="content" id="page3">
+    </div>  
+    <div class="content" id="page1">
         <figure class="vs">
             <img src="" alt="">
         </figure>
@@ -382,7 +406,7 @@
                     <option value="job.html1#page1">인재 채용</option>
                 </select> &gt; 
                 <select name="sel4" id="sel4" class="sel">
-                    <option selected>오시는길</option>
+                    <option selected>즐거움</option>
                     <option value="brand.html#page1">인사말</option>
                     <option value="brand.html#page2">건강</option>
                 </select>
@@ -390,23 +414,23 @@
         </div>
         <section class="page">
             <div class="page_wrap">
-                <h2 class="page_title2">즐거움</h2>
-                <h3 class="page_sub2">세계인의 꿈과 즐거움을 만들어가는 CJ브랜드 입니다</h3>
-                <ul class="pic_lst">
+                <h2 class="page_title">즐거움</h2>
+                <h3 class="page_sub">세계인의 꿈과 즐거움을 만들어가는 CJ브랜드 입니다</h3>
+                <ul class="pic_lst3">
                     <li>
                         <a href="">
-                            <img src="THE CJ CUP로고" alt="THE CJ CUP" class="pic">
+                            <img src="/web01/brand/health/fun/cup.png" alt="THE CJ CUP" class="pic">
                                 <div class="hv_box">
-                                    <h3 class="pic_tit2">THE CJ CUP @NINE BRIDGES                                    </h3>
-                                    <p class="pic_com2">대한민국 유일의 PGA TOUR 정규대회</p>
-                                    <p class="pic_last2">THE CJ CUP</p>
+                                    <h3 class="pic_tit3">THE CJ CUP @NINE BRIDGES                                    </h3>
+                                    <p class="pic_com3">대한민국 유일의 PGA TOUR 정규대회</p>
+                                    <p class="pic_last">THE CJ CUP</p>
                                 </div>
                             </img>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="CGV" alt="CGV" class="pic">
+                            <img src="/web01/brand/health/fun/cgv.png" alt="CGV" class="pic">
                                 <div class="hv_box">
                                     <h3 class="pic_tit2">CGV</h3>
                                     <p class="pic_com2">영화 그 이상의 감동을 전하는 GLOBAL NO.1 CULTUREPLEX CGV!</p>
@@ -417,7 +441,7 @@
                     </li>
                     <li>
                         <a href="">
-                            <img src="tvN" alt="tvN" class="pic">
+                            <img src="/web01/brand/health/fun/tv.png" alt="tvN" class="pic">
                                 <div class="hv_box">
                                     <h3 class="pic_tit2">tvN</h3>
                                     <p class="pic_com2">No.1 K콘텐츠 채널, 즐거움엔 tvN</p>
@@ -428,7 +452,7 @@
                     </li>
                     <li>
                         <a href="">
-                            <img src="Mnet" alt="Mnet" class="pic">
+                            <img src="/web01/brand/health/fun/m.png" alt="Mnet" class="pic">
                                 <div class="hv_box">
                                     <h3 class="pic_tit2">Mnet</h3>
                                     <p class="pic_com2">Music Makes One</p>
@@ -437,43 +461,40 @@
                             </img>
                         </a>
                     </li>
+                    <li>
+                        <a href="">
+                            <img src="/web01/brand/health/fun/ma.png" alt="MAMA" class="pic">
+                                <div class="hv_box">
+                                    <h3 class="pic_tit2">MAMA</h3>
+                                    <p class="pic_com2">세계 최고의 KPOP 음악 시상식</p>
+                                    <p class="pic_last2">CJ ENM 엔터테인먼트부문</p>
+                                </div>
+                            </img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/web01/brand/health/fun/to.png" alt="Tooniverse" class="pic">
+                                <div class="hv_box">
+                                    <h3 class="pic_tit2">Tooniverse</h3>
+                                    <p class="pic_com2">우리들의 투니버스!</p>
+                                    <p class="pic_last2">CJ ENM 엔터테인먼트부문</p>
+                                </div>
+                            </img>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/web01/brand/health/fun/tving.png" alt="TVING" class="pic">
+                                <div class="hv_box">
+                                    <h3 class="pic_tit2">TVING</h3>
+                                    <p class="pic_com2">No1. K콘텐츠 플랫폼</p>
+                                    <p class="pic_last2">TVING</p>
+                                </div>
+                            </img>
+                        </a>
+                    </li>
                 </ul>
-                    <li>
-                        <a href="">
-                            <img src="OCN" alt="OCN" class="">
-                            <div class="hv_box"></div>
-                            <h3 class="pic_tit2">OCN</h3>
-                            <p class="pic_com2">No.1 스토리테인먼트</p>
-                            <p class="pic_last2">CJ ENM 엔터테인먼트부문</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="MAMA" alt="MAMA" class="pic">
-                            <div class="hv_box"></div>
-                            <h3 class="pic_tit2">MAMA</h3>
-                            <p class="pic_com2">세계 최고의 KPOP 음악 시상식</p>
-                            <p class="pic_last2">CJ ENM 엔터테인먼트부문</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="Tooniverse" alt="Tooniverse" class="pic">
-                            <div class="hv_box"></div>
-                            <h3 class="pic_tit2">Tooniverse</h3>
-                            <p class="pic_com2">우리들의 투니버스!</p>
-                            <p class="pic_last2">CJ ENM 엔터테인먼트부문</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="TVING" alt="TVING" class="pic">
-                            <div class="hv_box"></div>
-                            <h3 class="pic_tit2">TVING</h3>
-                            <p class="pic_com2">No1. K콘텐츠 플랫폼</p>
-                            <p class="pic_last2">TVING</p>
-                        </a>
-                    </li>
             </div>
         </section>
     </div>

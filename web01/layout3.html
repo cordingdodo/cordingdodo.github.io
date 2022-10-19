@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ 그룹</title>
+    <!-- 메타포 -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- 오픈그래프 -->
+    <meta property="og:site_name" content="WE DISPLAY">
+    <meta property="og:title" content="WE DISPLAY">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요.">
+    <meta property="og:image" content="./img/icon/share.png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favi.png">
+    <!-- 각 종 플러그인과 설정 파일 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- 구형 브라우저 html5태그 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- 구형 브라우저에서 css animation 인식 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- jquery 플러그인 연결 -->
+    <script src="./js/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="header.css">
+    <style>
+        /* header.css */
+        .hd { position:fixed; }
+    
+        /* content */
+        .vs { clear:both; width: 100%; height:300px; overflow: hidden; }
+        .vs img { display:block; width: 100%; height:auto; }
+        .bread { clear:both; width: 100%; line-height: 60px; border-bottom:3px solid #eee; }
+        .bread_fr { width: 1200px; margin: 0 auto; }
+        .page { clear:both; width: 100%; min-height:100vh;}
+        .page:after { content:""; display:block; clear:both; }
+        .page_wrap { width: 1200px; margin: 0 auto; }
+        .page2 {clear:both; width: 100%; min-height:100vh;}
+        .page2_wrap { width: 1200px; margin: 0 auto; }
+        .page_lst{ width: 1200px; margin: 0 auto; }
+        /* .content { display:none; }
+        .content:target { display:block; } */
+    
+        .page_title { padding-top: 1em; font-size: 60px; text-align: center;  }
+        .page2_title { padding-top: 1em; font-size: 20px; text-align: left;}
+        .page2_titl { padding-top: 1em; font-size: 30px; text-align: left; padding-bottom: 30px; }
+        .msg {text-align: left;  padding-top: 1em; font-size: 30px; padding-bottom: 3em;}
+        .msg2  {text-align: left;  padding-top: 1em; font-size: 15px;}
+        .msg3 {text-align: left;  padding-top: 1em; font-size: 30px; padding-bottom: 3em;}
+        .msg4  {text-align: left;  padding-top: 1em; font-size: 15px;}
+        .m_block {margin-top: 30px; margin-bottom: 30px; }
+        .m_block2 {margin-top: 30px; margin-bottom: 30px; color:blue;}
+        /* .rodemap {color: aqua;} */
+        .m_b_tit {text-align: center; padding-top: 50px; font-size: 25px;}
+        .pic_com { margin-left: 30px; top: 80px; left: 30px; position: absolute; color: #fff;}
+        .pic_tit { margin-left: 30px; top: 20px; left: 30px; position: absolute; font-size: 30pt; color: #fff;}
+        .pic_lst { width: 100%;}
+        .img_box { clear:both; width: 1200px; height: 600px; margin:40px auto; font-size: 18px; text-align: left; margin-top: 100px;}
+        .img_box_fr { float:left; margin:10px; width: 400px; height: 700px; margin-left: 100px; margin-right: 80px;}
+        .img_box_fr img { display:block; width: 100%; height: auto; }
+        .img_box2 { clear:both; margin:40px auto; padding-right: 200px;}
+
+        .img_box_tx { font-size: 30px; font-weight:bold; }
+        .img_box_tx1 { font-size: 15px;}
+        .img_box_tx2 {font-size: 15px; font-weight: lighter;}
+        .img_box_tx3 { font-size: 23px; font-weight:bold; }
+        .img_box_tx5 {font-size: 23px; font-weight: bold; padding-bottom: 2em;}
+
+        .page_aside { width: 200px; min-height:500px; float:left; }
+        .year_fr { width: 500px; min-height:500px; float:right; }
+        .year_lst { clear: both; border-left:1px solid #333; }
+        .year_lst li { clear:both; height: 90px; position:relative; }
+        .year_lst li:before { content:""; display:block; width: 12px; height: 12px; 
+    border-radius:8px; background-color:#333; position:absolute; top:0px; left:-6px; z-index:10; }
+        .year_lst li h3, .year_lst li p { padding-left: 30px; }
+        .tit_2 {text-align: center; font-size: 30px; padding-top: 4em; padding-bottom: 1.5em;}
+        .y_2 {text-align: center; font-size: 40px; padding-bottom: 1.5em;}
+        .y_3 {text-align: center; font-size: 20px; padding-bottom: 6em;}
+        .aside_img1 {display: block; width: 600px;}
+
+        .img_ceo {width: 1200px; padding-top: 100px; padding-bottom: 100px;}
+    
+
+        .page2_tit {text-align: center; font-size: 30px;padding-top: 1em;}
+        .page2_txt {text-align: center; font-size: 15px;padding-top: 2em;}
+        .text {text-align: center; font-size: 20px; padding-top: 100px; padding-bottom: 100px;}
+
+        
+        .content { clear:both; width: 100%; min-height:100vh;}
+        .content2 { width: 1200px; padding-left: 600px;}
+
+        .box_tx1 {clear: both; color: gray;}
+        .text4 {display: block; text-align: center; font-size: 30px; color: #333;}
+        .map {width: 1200px;}
+        
+        
+
+
+
+
+
+
+        .home { color:#333; }
+        .to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
+        background-color:rgba(11,11,11,0.75); color:#fff; display:block; width: 60px;
+        height: 60px; line-height: 60px; text-align: center; font-size:20px; border-radius:32px; visibility:hidden; transition-duration:0.8s; }
+        .to_top:hover { background-color: deepskyblue; }
+        .to_top.on { visibility: visible; }
+        </style>
+        <link rel="stylesheet" href="footer.css">
+        <script>
+        $(document).ready(function(){
+            $(".to_top").attr("href", location.href);
+            $(window).scroll(function(){
+                var ht = $(window).height();
+                var tp = $(this).scrollTop();
+                if(tp>=300){
+                    $(".to_top").addClass("on");
+                    $(".to_top").attr("href", location.href);
+                } else {
+                    $(".to_top").removeClass("on");
+                    $(".to_top").attr("href", location.href);
+                }
+            });
+        });    
+        </script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="index.html" class="logo"><img src="img/CJ_logo.png" alt="로고"></a>
+            <nav class="tnb">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+                <a href="sitemap.html">사이트맵</a>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li class="item1">
+                        <a href="" class="dp1">CJ Now</a>
+                    <li class="item2">
+                        <a href="" class="dp1">Brand</a>
+                        <ul class="sub">
+                            <li><a href="brand.html#page1">Best brand</a></li>
+                            <li><a href="brand.html#page2">건강</a></li>
+                            <li><a href="brand.html#page3">즐거움</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dp1">Sustainability</a>
+                        <ul class="sub">
+                            <li><a href="susta.html#page1">지향점</a></li>
+                            <li><a href="susta.html#page2">운영재단</a></li>
+                            <li><a href="susta.html#page3">나눔재단</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="" class="dp1">CJ소개</a>
+                        <ul class="sub">
+                            <li><a href="company.html#page1">회사소개</a></li>
+                            <li><a href="company.html#page2">회사연혁</a></li>
+                            <li><a href="company.html#page3">계열사</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="" class="dp1">인재 채용</a>
+                        <ul class="sub">
+                            <li><a href="job.html1#page1">채용공고</a></li>
+                            <li><a href="job.html1#page2">직무정보</a></li>
+                            <li><a href="job.html1#page3">게시판</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content" id="page1">
+        <figure class="vs">
+            <imc src="" alt="">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel1" id="sel1" class="sel">
+                <option>CJ소개</option>
+                <option value="cjnow.html#page1">Cj now</option>
+                <option value="brand.html#page1">Brand</option>
+                <option value="company.html#page1">CJ 소개</option>
+                <option value="job.html1#page1">인재 채용</option>
+             </select> &gt;
+             <select name="sel2" id="sel2" class="sel">
+                <option selected>회사소개</option> 
+                <option value="company.html#page2">회사연혁</option>
+                <option value="company.html#page3">계열사</option>
+                </select>
+            </div>
+        </div>
+        <section class="page">
+                <div class="page_wrap">
+                    <h2 class="page_title"></h2>
+                    <img class="img_box3" src="./cj/index.jpg">
+                        <h2 class="page2_title">회사소개</h2>
+                        <ul class="page2_titl">CJ는 ONLYONE 정신으로<br>
+                            세계인의 문화를 만들어 갑니다
+                        </ul>
+                    <div class="box_tx1">
+                    <div class="img_box">
+                    <div class="img_box_fr">
+                        <img src="./cj/1.png"alt="인덱스"></div>
+                    <text class="img_box_tx100"><br><br>
+                    <text class="img_box_tx">
+                        CULTURE<br><br></text>
+                        <text class="img_box_tx4">문화를 만드는 일은 CJ가 가장 잘하는 일입니다.<br>
+                            CJ는 우리의 아름다운 문화를 전 세계인들에게 알리기 위해 가장 앞서 달리고<br>
+                            있습니다. 세계의 라이프스타일을 주도하는 한류의 중심에 CJ가 있습니다.<br><br><br><br></text>
+                    <text class="img_box_tx">GLOBAL<br><br></text>
+                        <text class="img_box_tx4">전 세계인이 일상생활 속에서 한국의 영화, 음식, 드라마, 음악을 마음껏 즐기며<br>
+                            일상의 행복을 누리게 되는 것. 그리고 이를 가장 앞서서 이끄는<br>
+                            최고의 생활문화기업이 되는 것이 바로 CJ의 꿈입니다.<br><br><br><br></text>
+                    <text class="img_box_tx">ONLYONE<br><br></text>
+                    <text class="img_box_tx4">ONLYONE 정신은 모든 면에서 최초, 최고, 차별화를 추구하는<br>
+                        CJ가 최우선으로 지향하는 가치입니다. 이를 바탕으로<br>
+                        CJ는 남들이 하지 않은 새로운 제품과 서비스, 시스템, 사업을<br>
+                        지속적으로 창출해 가고 있습니다.</text>
+                    </div>
+                        <img class="img_ceo" src="/web01/cj/2.PNG"></img>
+                        <div class="img_box_fr">
+                            <img src="./cj/3.png" alt="인덱스"></div>
+                                <text class="img_box_tx100">
+                            <text class="img_box_tx"> <br><br><br>CJ의 세가지 컬러는<br>
+                                건강, 즐거움, 편리를 상징합니다.<br><br></text>
+                                <text class="img_box_tx4">CJ는 우리의 문화를 더 넓은 세상, <br>
+                                    더 많은 사람들에게 알리기 위해 앞장서고 있습니다.<br>
+                                    전 세계인이 일상에서 한국의 영화, 음식, 드라마, 음악을 마음껏 즐기며 <br>
+                                    행복을 누리는 것,<br>
+                                    인류의 삶을 보다 풍요롭게 만드는 것이 CJ가 꿈꾸는 세상입니다.<br>
+                                    <br><br>
+                                    이를 위해 CJ는 식품 & 식품서비스, 생명공학, 물류 & 신유통, <br>
+                                    엔터테인먼트 & 미디어 4대 사업을 중심으로<br>
+                                    전 세계인이 함께 누리는 건강하고, 즐겁고, <br>
+                                    편리한 글로벌 라이프스타일을 만들고 있습니다.<br><br><br>
+                                    CJ의 Blossom은 이러한 가치를 전달하는 한편 세계 시장과 고객을 향해 <br>
+                                    만개하는 꽃처럼 새롭게 피어나는 CJ를 상징하며 고객에게 <br>
+                                    언제나 새롭고 친근하게 다가가는 기업이라는
+                                    의미를 담고 있습니다.</text></text>
+                     </div>
+                 </div>
+    </section>
+
+    </div>
+    <div class="content" id="page2">
+        <figure class="vs">
+            <img src="" alt="">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel3" id="sel3" class="sel">
+                    <option>CJ소개</option>
+                    <option value="cjnow.html#page1">Cj now</option>
+                    <option value="brand.html#page1">Brand</option>
+                    <option value="company.html#page1">CJ 소개</option>
+                    <option value="job.html1#page1">인재 채용</option>
+                </select> &gt; 
+                <select name="sel4" id="sel4" class="sel">
+                    <option selected>회사연혁</option> 
+                    <option value="company.html#page1">회사소개</option>
+                    <option value="company.html#page3">계열사</option>
+                </select>
+            </div>
+        </div>
+        <section class="page2">
+            <div class="page2_wrap">
+                <img class="img_box3" src="/web01/cj/2.jpg">
+                    <h2 class="page2_title">연혁</h2>
+                    <ul class="page2_titl">CJ가 걸어온 도전과 개척,<br>
+                        창조와 성취의 여정을 소개합니다</ul>                    
+                        <div class="page_wrap">
+                            <h2 class="tit_2">창업 및 종합식품회사로 성장</h2>
+                                <h3 class="y_2">1953-1992</h3>
+                                    <h4 class="y_3">사업보국의 창업이념 하에, 한국전쟁 직후 자립경제 기틀 마련을 위해 한국 최초로 설탕공장을 설립하였고,<br>
+                                        밀가루, 조미료, 식용유 등의 사업 확장을 통해 종합식품회사로 성장하였다.</h4>
+                            <div class="page_aside">
+                                <h2 class="aside_tit"></h2>
+                                <img src="../web01/cj/1953.jpg" alt="img1" class="aside_img1">
+                                <img src="../web01/cj/2-2.jpg" alt="img1" class="aside_img1">
+                            </div>
+                            <div class="year_fr">
+                                <ul class="year_lst">
+                                    <li>
+                                        <h3 class="year_tit">1953</h3>
+                                        <p class="yesr_com">제일제당공업주식회사 설립(現 CJ제일제당)
+                                            한국 최초 설탕 생산</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1958</h3>
+                                        <p class="yesr_com">제분사업 진출</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1962</h3>
+                                        <p class="yesr_com">한국 최초 설탕 수출</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1963</h3>
+                                        <p class="yesr_com">조미료사업 진출</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1965</h3>
+                                        <p class="yesr_com">식품 대표 브랜드 '백설' 출시</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1973</h3>
+                                        <p class="yesr_com">사료사업 진출(現 CJ Feed&Care)</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1975</h3>
+                                        <p class="yesr_com">종합 조미료 브랜드 ‘다시다’ 출시</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1977</h3>
+                                        <p class="yesr_com">핵산 조미료 ‘아이미’ 출시</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1978</h3>
+                                        <p class="yesr_com">식품 연구소 설립</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1979</h3>
+                                        <p class="yesr_com">‘백설표 식용유’ 출시</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1980</h3>
+                                        <p class="yesr_com">육가공사업 진출</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1987</h3>
+                                        <p class="yesr_com">냉동식품사업 진출</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="year_tit">1988</h3>
+                                        <p class="yesr_com">인도네시아 BIO사업 진출</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="page">
+                            <h2 class="tit_2">생활문화기업으로 확장</h2>
+                              <h3 class="y_2">1993-2001</h3>
+                               <h4 class="y_3">그룹의 비전을 생활문화기업으로 선포하고, 식품&식품서비스, 생명공학, 물류&신유통,
+                                             엔터테인먼트&미디어의 4대 사업군으로 사업영역을 확대하였다.</h4>                       
+                                             <div class="page_aside">
+                                                <h2 class="aside_tit"></h2>
+                                                <img src="../web01/cj/2-5.jpg" alt="img1" class="aside_img1">
+                                            </div>
+                                            <div class="year_fr">
+                                                <ul class="year_lst">
+                                                    <li>
+                                                        <h3 class="year_tit">1993</h3>
+                                                        <p class="yesr_com">제일제당 독립 경영 선언</p>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="year_tit">1994</h3>
+                                                        <p class="yesr_com">외식사업 진출(現 CJ푸드빌)<br>
+                                                            단체급식사업 진출(現 CJ프레시웨이)</p>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="year_tit">1995</h3>
+                                                        <p class="yesr_com">정보시스템업 진출(現 CJ올리브네트웍스)<br>
+                                                            종합건설업 진출(現 CJ대한통운 건설부문)<br>
+                                                            영화사업 진출(現 CJ ENM E&M부문)</p>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="year_tit">1996</h3>
+                                                        <p class="yesr_com">제일제당 그룹 출범<br>
+                                                            한국 최초 즉석밥 브랜드 ‘햇반’ 출시<br>
+                                                            인도네시아 사료사업 진출<br>
+                                                            극장영상사업 진출(現 CJ CGV)</p>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="year_tit">1997</h3>
+                                                        <p class="yesr_com">프리미엄 스테이크하우스 ‘빕스(VIPS)’ 런칭<br>
+                                                            미디어사업 진출(現 CJ ENM E&M부문)<br>
+                                                            건강한 데일리 베이커리, ‘뚜레쥬르’ 런칭<br>
+                                                            필리핀 사료사업 진출</p>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="year_tit">1998</h3>
+                                                        <p class="yesr_com">인도네시아 좀방 핵산공장 설립<br>
+                                                            물류사업 진출, CJ GLS 설립(現 CJ대한통운)<br>
+                                                            한국 최초 멀티플렉스 ‘CGV강변11’ 개관</p>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="year_tit">1999</h3>
+                                                        <p class="yesr_com">한국 최초 헬스&뷰티스토어 ‘올리브영’ 런칭<br>
+                                                            식자재유통업 진출(現 CJ프레시웨이)</p>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="year_tit">2000</h3>
+                                                        <p class="yesr_com">대기업 최초 ‘님’문화 도입<br>
+                                                            CJ엔터테인먼트 설립(現 CJ ENM E&M부문)<br>
+                                                            CJ푸드빌 설립<br>
+                                                            한국 최초 프리미엄 상영관 CGV ‘골드클래스’ 개관<br>
+                                                            CJ푸드시스템 설립(現 CJ프레시웨이)</p>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="year_tit">1978</h3>
+                                                        <p class="yesr_com">식품 연구소 설립</p>
+                                                    </li>
+                                                    <li>
+                                                        <h3 class="year_tit">2001</h3>
+                                                        <p class="yesr_com">제주 ‘클럽나인브릿지’ 골프클럽 개장</p>
+                                                    </li>
+                                                </ul>            
+                                            </div>
+                                            <div class="page">
+                                                <h2 class="tit_2">4대 사업군 완성 및 글로벌 진출</h2>
+                                                  <h3 class="y_2">2002-2016</h3>
+                                                   <h4 class="y_3">4대 사업군의 완성(한국 내 1위)을 기반으로 해외 진출을 전개함으로써<br>
+                                                    글로벌 기업으로서의 면모를 갖추어 나갔다.</h4> 
+                                                    <div class="page_aside">
+                                                        <h2 class="aside_tit"></h2>
+                                                        <img src="../web01/cj/2-6.jpg" alt="img1" class="aside_img1">
+                                                        <img src="../web01/cj/2-7.jpg" alt="img1" class="aside_img1">
+                                                    </div>
+                                                    <div class="year_fr">
+                                                        <ul class="year_lst">
+                                                            <li>
+                                                                <h3 class="year_tit">2002</h3>
+                                                                <p class="yesr_com">CJ그룹 출범<br>
+                                                                    CJ미디어 설립(現, CJ ENM E&M부문)<br>
+                                                                    한국 최초 LPGA투어 ‘CJ나인브릿지 클래식‘ 개최</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2003</h3>
+                                                                <p class="yesr_com">공연사업 진출(現, CJ ENM E&M부문)<br>
+                                                                    중국 사료사업 진출<br>
+                                                                    CJ인재원 개원</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2004</h3>
+                                                                <p class="yesr_com">미국 베이커리사업 진출, LA ‘뚜레쥬르’ 1호점 런칭</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2005</h3>
+                                                                <p class="yesr_com">
+                                                                    ‘CJ나눔재단’설립, CJ도너스캠프 출범<br>
+                                                                    ‘N서울타워’ 운영 시작<br>
+                                                                    중국 베이커리사업 진출, 베이징 ‘뚜레쥬르‘ 1호점 런칭<br>
+                                                                    미국 식품시장 진출</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2006</h3>
+                                                                <p class="yesr_com">중국 극장영상사업 진출, 따닝 ‘CGV’ 1호점 런칭<br>
+                                                                    Contents Trend Leader ‘tvN’개국<br>
+                                                                    ‘CJ문화재단’설립<br>
+                                                                    동남아시아 물류사업 진출</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2007</h3>
+                                                                <p class="yesr_com">고품격 프리미엄 상영관 CGV ‘씨네드쉐프’개관<br>
+                                                                    베트남 베이커리사업 진출, 호치민 ‘뚜레쥬르’ 1호점 런칭<br>
+                                                                    브라질 BIO사업 진출</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2009</h3>
+                                                                <p class="yesr_com">세계 최초 실감형 상영관 ‘4DX’개관<br>
+                                                                    여주 ‘해슬리 나인브릿지‘ 골프클럽 개장</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2010</h3>
+                                                                <p class="yesr_com">미국 극장영상사업 진출, LA ‘CGV’ 1호점 개관<br>
+                                                                    글로벌 음악시상식 ‘MAMA’ 개최(마카오)<br>
+                                                                    글로벌 한식 브랜드 ‘비비고‘ 출시<br>
+                                                                    통합멤버십서비스 ‘CJ ONE’ 출시</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2011</h3>
+                                                                <p class="yesr_com">CJ E&M 설립(現, CJ ENM E&M부문)<br>
+                                                                    한국 최초 컬처플렉스 ‘CGV청담씨네시티‘ 개관<br>
+                                                                    인도네시아 베이커리사업 진출, 자카르타 ‘뚜레쥬르‘ 1호점 런칭<br>
+                                                                    베트남 극장영상사업 진출</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2012</h3>
+                                                                <p class="yesr_com">한국문화 페스티벌 ‘KCON’ 개최(LA)</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2013</h3>
+                                                                <p class="yesr_com">CJ GLS-대한통운 통합(現, CJ대한통운)<br>
+                                                                    미국 BIO사업 진출, 포트닷지 BIO공장 설립<br>
+                                                                    중국 헬스&뷰티스토어 사업 진출, 상하이 ‘올리브영’ 1호점 런칭</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2014</h3>
+                                                                <p class="yesr_com">4DX 미국시장 진출</p>
+                                                            </li>
+                                                            <li>
+                                                                <h3 class="year_tit">2015</h3>
+                                                                <p class="yesr_com">말레이시아 BIO사업 진출, 메치오닌 공장 설립<br>
+
+                                                                    중국 물류사업 거점 확대, CJ대한통운 Rokin Logistics 인수<br>
+                                                                    
+                                                                    캄보디아 사료사업 진출, 프놈펜 공장 설립</p>
+                                                            </li>
+                                                        </ul>            
+                                                    </div>
+                                        </div>       
+        <div class="content2">
+                    </ul>
+                </h3>
+            </h2>
+            </h2>
+           </div>
+        </section>
+                <div class="content" id="page3">
+        <figure class="vs">
+            <img src="./img/vs1.jpg" alt="">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel4" id="sel4" class="sel">
+                    <option>CJ 소개</option>
+                    <option value="cjnow.html#page1">Cj now</option>
+                    <option value="brand.html#page1">Brand</option>
+                    <option value="company.html#page1">CJ 소개</option>
+                    <option value="job.html1#page1">인재 채용</option>
+                </select> &gt; 
+                <select name="sel4" id="sel4" class="sel">
+                    <option selected>계열사</option> 
+                    <option value="company.html#page1">회사소개</option>
+                    <option value="company.html#page2">회사연혁</option>
+                </select>
+            </div>
+        </div>
+        <section class="page2">
+            <div class="page2_wrap">
+                <img class="img_box3" src="/web01/cj/3-1.png">
+                    <h1 class="page2_f">
+                    <h2 class="page2_title">계열사</h2>
+                    <ul class="page2_titl">생활 곳곳에 퍼져가는<br>
+                        문화를 만듭니다
+                    </ul></h1>
+                 <div class="box_tx1">
+                    <h2 class="text4">세계 속의 생활문화기업 CJ가<br>
+                        고객의 건강, 즐거움, 편리를 창조합니다.</div>
+                <div class="img_box">
+                <div class="img_box_fr">
+                    <img src="./cj/cj.jpg" alt="제일제당"> <br><br></div>
+                 <text class="img_box_tx100"><br><br>
+                <text class="img_box_tx">
+                    CJ제일제당<br><br></text>
+                    <text class="img_box_tx5">K-FOOD 열풍을 이끄는 글로벌 식품 문화 기업<br></text><br><br>
+                    <text class="img_box_text">1953년 대한민국 최초의 설탕 제조업으로부터 <br><br>
+                        출발하여 60여 년간 우리나라의식품업계를 이끌어온 CJ제일제당. <br><br>
+                        우리의 우수한 한식을 세계에 전파해 현지<br><br>
+                        음식과 한식을 결합한 K-Food로 한국의 맛을 세계화하고, <br><br>
+                        새로운 기술로 다양하고 프리미엄한 제품을 선보이며<br><br>
+                        건강하고 편리한 라이프스타일을 제시하고 있습니다. <br><br>
+                        지난 60년간의 끊임없는 연구와 발전, 계승과 혁신으로<br><br>
+                        한국 전통 식품 및 식문화를 전하며 세계의 고객에게 <br><br>
+                        한국의 맛과 문화를 전하고 있습니다.<br>
+                    <br><br><br><br></text>
+                </ul>
+            </div>
+            <div id="map">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.622951362127!2d127.00108911524651!3d37.56394623203435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca25e22256703%3A0x386e3ec0e0817d29!2zQ0rsoJzsnbzsoJzri7k!5e0!3m2!1sko!2skr!4v1666155531600!5m2!1sko!2skr" width="1200" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>  
+              <div class="img_box">
+                <div class="img_box_fr">
+                    <img src="./cj/bio.png" alt="바이오"> <br><br></div>
+                 <text class="img_box_tx100"><br><br>
+                <text class="img_box_tx">
+                    CJ제일제당 BIO사업부문<br><br></text>
+                    <text class="img_box_tx5">초일류 친환경 바이오 발효 기술로 기존의<br> BIO사업영역을
+                        뛰어넘어 건강한 인류의 삶을 추구합니다<br></text><br><br>
+                    <text class="img_box_text">CJ BIO는 세계 최고 수준의 기술력으로 <br><br>
+                        바이오 산업에 새로운 패러다임을 제시하는 Global Top Leader 입니다. <br><br>
+                        우수한 품질의 발효 바이오 제품을 개발하기 위해 <br><br>
+                        R&D 기술에 적극적으로 투자하며 지속적인 혁신으로 <br><br>
+                        기대 이상의 결과를 달성하고 있습니다. <br><br>
+                        또한 CJ BIO는 인류가 직면한 환경 문제를 해결하고 <br><br>
+                        지속 가능한 지구를 만들기 위해 기여하고 있습니다.<br><br>
+                        우리의 모든 제품과 연구 활동은 인간, 동물 및 <br><br>
+                        모든 생명체의 존엄성을 기반으로 합니다. <br><br>
+                        지구가 직면한 환경오염, 지구 온난화의 문제를 해결하기 위해<br><br>
+                        우리는 지속적으로 환경 친화적인 제품과 
+                        기술 등을 연구하고 있습니다.<br><br>
+                    <br><br><br><br></text>
+                </ul>
+            </div>
+            <div id="map">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.622951362127!2d127.00108911524651!3d37.56394623203435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca25e22256703%3A0x386e3ec0e0817d29!2zQ0rsoJzsnbzsoJzri7k!5e0!3m2!1sko!2skr!4v1666155531600!5m2!1sko!2skr" width="1200" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>  
+              <div class="img_box">
+                <div class="img_box_fr">
+                    <img src="./cj/olive.png" alt="올영"> <br><br></div>
+                 <text class="img_box_tx100"><br><br>
+                <text class="img_box_tx">
+                    CJ올리브영<br><br></text>
+                    <text class="img_box_tx5">건강한 아름다움을 제안하는 라이프스타일 플랫폼 ‘올리브영’</text><br><br>
+                    <text class="img_box_text">올리브영은 지난 1999년 국내에 최적화된 <br><br>
+                        헬스&뷰티 스토어를 최초로 선보인 이래 <br><br>
+                        늘 최초, 최고의 길을 걸어왔습니다. <br><br>
+                        미래 트렌드를 읽고 끊임없이 변화·혁신하며 <br><br>
+                        고객에게 차별화된 서비스를 제공하고 있습니다.<br><br>
+                        올리브영은 20여 년간 축적된 경험과 데이터, <br><br>
+                        협력체계를 기반으로 보다 많은 이들이 건강하고 <br><br>
+                        아름다워질 수 있도록 차별화된 쇼핑 가치를 창출합니다.<br><br>
+                        전국 1,200여 개 매장, 온라인몰, 글로벌 K뷰티 역직구 플랫폼을 통해 <br><br>
+                        이제는 국내를 넘어 글로벌 시장을 선도하는 기업으로 발돋움하고 있습니다.<br><br>
+                        올리브영은 건강한 아름다움과 일상 속의 새로움을 전하는 <br><br>
+                        ‘라이프스타일플랫폼’으로서 고객과 가장 가까운 곳에 함께 하겠습니다.<br><br>
+                    <br><br><br><br></text>
+                </ul>
+            </div>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.183404255075!2d126.97053161524596!3d37.55074253279033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca266339b5647%3A0x1c9209ffc65a5fe0!2z7Yq47JyI7Iuc7Yuw64Ko7IKw!5e0!3m2!1sko!2skr!4v1666156206344!5m2!1sko!2skr" width="1200" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                </div>
+                <div class="img_box">
+                    <div class="img_box_fr">
+                        <img src="./cj/cgv.png" alt="cgv"> <br><br></div>
+                     <text class="img_box_tx100"><br><br>
+                    <text class="img_box_tx">
+                        CJ CGV<br><br></text>
+                        <text class="img_box_tx5">영화 그 이상의 감동을 선사하는 문화놀이터<br></text><br><br>
+                        <text class="img_box_text">대한민국 최초의 멀티플렉스 영화관 <br><br>
+                            CJ CGV는 영화 그 이상의 감동을 전하는 최고의 컬처플렉스입니다. <br><br>
+                            1998년 대한민국 최초 멀티플렉스 극장으로 <br><br>
+                            영화관람의 새로운 트렌드를 이끈 CJ CGV는 이제 영화 이상의 새로운<br><br>
+                            라이프스타일을 창조하는 문화 놀이터 ‘컬처플렉스’로 그 가치를 전 세계<br><br>
+                            고객에게 선사하고 있습니다. 4DX, SCREENX, CINE & FORET,<br><br>
+                            CINE & LIVING ROOM 등 특화된 상영관을 통해 최적의 관람 환경과<br><br>
+                            차별화된 서비스 를 제공하며 미국, 중국, 베트남, 인도네시아, 미얀마, 터키<br><br>
+                            전 세계인들에게 CGV만의 즐거움과 감동을 전하고 있습니다.<br><br>
+                        <br><br><br><br></text>
+                    </ul>
+                </div>
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1582.0435069137047!2d126.96353145817234!3d37.52944607205229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca203432edc87%3A0xd5a7c2f11241f695!2zQ0dWIOyaqeyCsOyVhOydtO2MjO2BrOuqsA!5e0!3m2!1sko!2skr!4v1666156448340!5m2!1sko!2skr" width="1200" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                  </div>  
+        </section>
+    </div>
+    </div>
+    <script>
+   var sel = document.getElementsByClassName("sel");
+    for(var i=0;i<sel.length;i++){
+        sel[i].addEventListener("change", function(){
+            location.href = this.value;
+        });
+    }
+    </script>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_logo"><img src="img/CJ_logo.png" alt=""></div>
+            <div class="mid_box">
+                <nav class="fnb">
+                    <a href="member01.html" class="dpc"> 개인정보 처리 방침</a>
+                    <a href="member02.html" class="dpc"> 이용약관</a>
+                    <a href="member03.html" class="dpc"> 공지사항</a>
+                    <a href="member04.html" class="dpc"> 온라인제보</a>
+                    <a href="member05.html" class="dpc"> 고객센터</a>
+                </nav>
+                <p class="addr">
+                    CJ 그룹 | 대표이사 | 정호영 사업자등록번호:120-81-55297<br>
+                    서울시 영등포구 여의대로 128 LG 트윈타워 |admin@wedisplay.solutions<br>
+                    통신판매업신고번호: 제2022-서울영등포-1247호<br>
+                    당 사는 통신판매중개자이며, 통신 판매의 당사자가 아닙니다. 상품 및 거래에 관한 의무와 책임은 판매자에게 있습니다.  
+                </p>
+                <p class="copyright">씨제이㈜. All Rights Reserved.</p>
+            </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">패밀리 사이트</option>
+                    <option value="https://www.cjenm.com/ko/">Cj ENM 엔터테인먼트</option>
+                    <option value="https://www.oliveyoung.co.kr">>CJ올리브영</option>
+                    <option value="https://www.cj.co.kr/kr/index">CJ제일제당</option>
+                    <option value="https://www.cjfoodville.co.kr/main.asp">CJ푸드빌</option>
+                    <option value="http://www.cjfreshway.com/index.jsp">CJ 제일제당</option>
+                    <option value="https://www.cj.co.kr/kr/index">CJ프레시웨이</option>
+                    <option value="http://www.cj.co.kr/kr/about/business/bio">CJ제일제당 BIO사업부문</option>
+                    <option value="https://www.cjlogistics.com/ko/main">CJ대한통운</option>
+                    <option value="https://www.cjolivenetworks.co.kr/">CJ올리브네트웍스</option>
+
+                </select>
+            </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+</div>
+<a href="#" class="to_top">↑</a> <!--#만 넣으면 뿅하고올라감--> <!--to.top_on 제이쿼리로 온클래스추가-->
+</body>
+</html>

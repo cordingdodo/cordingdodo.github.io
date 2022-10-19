@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ 그룹</title>
+    <!-- 메타포 -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- 오픈그래프 -->
+    <meta property="og:site_name" content="WE DISPLAY">
+    <meta property="og:title" content="WE DISPLAY">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요.">
+    <meta property="og:image" content="./img/icon/share.png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favi.png">
+    <!-- 각 종 플러그인과 설정 파일 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <!-- 구형 브라우저 html5태그 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- 구형 브라우저에서 css animation 인식 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- jquery 플러그인 연결 -->
+    <script src="./js/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="header.css">
+    <style>
+        /* header.css */
+        .hd {
+            position: fixed;
+        }
+
+        /* content */
+        .vs {
+            clear: both;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .vs img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .bread {
+            clear: both;
+            width: 100%;
+            line-height: 60px;
+            border-bottom: 3px solid #eee;
+        }
+
+        .bread_fr {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page {
+            clear: both;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .page:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .page_wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page2 {
+            clear: both;
+            width: 100%;
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+        .page2_wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page_lst {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* .content { display:none; }
+        .content:target { display:block; } */
+        .page_title {
+            padding-top: 50px;
+            font-size: 25px;
+        }
+
+        .page_title {
+            padding-top: 1em;
+            font-size: 60px;
+            text-align: center;
+        }
+
+        .page_sub {
+            padding-top: 1em;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .pic_lst {
+            clear: both;
+            width: 100%;
+        }
+
+        .pic_lst li {
+            width: 30%;
+            float: left;
+            margin-right: 5%;
+            margin-bottom: 60px;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .pic_lst li a {
+            display: block;
+            position: relative;
+        }
+
+        .pic_lst li a .pic_fr {
+            width: 350px;
+            height: 160px;
+            overflow: hidden;
+            background-color: #dcdcdc;
+        }
+
+        .pic_lst li a img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .pic_lst li:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        .pic_tit {
+            line-height: 2.5;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #222;
+        }
+
+        .pic_com,
+        .pic_info {
+            line-height: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #222;
+        }
+
+
+
+        .to_top {
+            position: fixed;
+            bottom: 80px;
+            right: 80px;
+            z-index: 999;
+            background-color: rgba(11, 11, 11, 0.75);
+            color: #fff;
+            display: block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 32px;
+            visibility: hidden;
+            transition-duration: 0.8s;
+        }
+
+        .to_top:hover {
+            background-color: deepskyblue;
+        }
+
+        .to_top.on {
+            visibility: visible;
+        }
+    </style>
+    <link rel="stylesheet" href="footer.css">
+    <script>
+        $(document).ready(function () {
+            $(".to_top").attr("href", location.href);
+            $(window).scroll(function () {
+                var ht = $(window).height();
+                var tp = $(this).scrollTop();
+                if (tp >= 300) {
+                    $(".to_top").addClass("on");
+                    $(".to_top").attr("href", location.href);
+                } else {
+                    $(".to_top").removeClass("on");
+                    $(".to_top").attr("href", location.href);
+                }
+            });
+        });    
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="hd">
+            <div class="hd_wrap">
+                <a href="index.html" class="logo"><img src="img/CJ_logo.png" alt="로고"></a>
+                <nav class="tnb">
+                    <a href="login.html">로그인</a>
+                    <a href="join.html">회원가입</a>
+                    <a href="sitemap.html">사이트맵</a>
+                </nav>
+                <nav class="gnb">
+                    <ul>
+                        <li class="item1">
+                            <a href="" class="dp1">CJ Now</a>
+                        <li class="item2">
+                            <a href="" class="dp1">Brand</a>
+                            <ul class="sub">
+                                <li><a href="brand.html#page1">Best brand</a></li>
+                                <li><a href="brand.html#page2">건강</a></li>
+                                <li><a href="brand.html#page3">즐거움</a></li>
+                            </ul>
+                        </li>
+                        <li class="item3">
+                            <a href="" class="dp1">Sustainability</a>
+                            <ul class="sub">
+                                <li><a href="susta.html#page1">지향점</a></li>
+                                <li><a href="susta.html#page2">운영재단</a></li>
+                                <li><a href="susta.html#page3">나눔재단</a></li>
+                            </ul>
+                        </li>
+                        <li class="item4">
+                            <a href="" class="dp1">CJ소개</a>
+                            <ul class="sub">
+                                <li><a href="company.html#page1">회사소개</a></li>
+                                <li><a href="company.html#page2">회사연혁</a></li>
+                                <li><a href="company.html#page3">계열사</a></li>
+                            </ul>
+                        </li>
+                        <li class="item5">
+                            <a href="" class="dp1">인재 채용</a>
+                            <ul class="sub">
+                                <li><a href="job.html1#page1">채용공고</a></li>
+                                <li><a href="job.html1#page2">직무정보</a></li>
+                                <li><a href="job.html1#page3">게시판</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="content" id="page1">
+            <figure class="vs">
+                <imc src="" alt="">
+            </figure>
+            <div class="bread">
+                <div class="bread_fr">
+                    <a href="index.html" class="home">HOME</a> &gt;
+                    <select name="sel1" id="sel1" class="sel">
+                        <option>Cj now</option>
+                        <option value="cjnow.html#page1">Cj now</option>
+                        <option value="brand.html#page1">Brand</option>
+                        <option value="company.html#page1">CJ 소개</option>
+                        <option value="job.html1#page1">인재 채용</option>
+                    </select>
+                </div>
+            </div>
+            <section class="page">
+                <div class="page_wrap">
+                    <h2 class="page_title">CJ NOW</h2>
+                    <h3 class="page_sub">CJ의 최신 소식을 지금 만나보세요</h3>
+                    <div class="con_wrap">
+                        <ul class="pic_lst">
+                            <li>
+                                <a href="">
+                                    <div class="pic_fr"><img src="./cjnow/1.jpg" alt="pic1"></div>
+                                    <div class="pic_hd"><span class="ht_ico best"></span><span
+                                            class="starating on"></span></div>
+                                    <h3 class="pic_tit">Mnet, 케이팝 컬처 플랫폼 ‘엠넷 플러스’ 앱 론칭</h3>
+                                    <p class="pic_com">한·영·일·중 4개 언어 지원, 콘텐츠 IP 함께 만들고 즐기며 케이팝 문화와 라이프 스타일 경험</p>
+                                    <p class="pic_info">4월 웹서비스 베타 론칭, 500만 가입자 모아</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic_fr"><img src="./cjnow/2.png" alt="pic1"></div>
+                                    <div class="pic_hd"><span class="ht_ico best"></span><span
+                                            class="starating on"></span></div>
+                                    <h3 class="pic_tit">CJ대한통운 l CJ대한통운 사업, 30초안에 살펴보기!👀</h3>
+                                    <p class="pic_com">CJ대한통운의 사업을 소개합니다📢</p>
+                                    <p class="pic_info">글로벌🗺️ 네트워크와 인프라, 첨단 기술🤖의 콜라보!🤝 물류 전 영역을 One-Stop으로!</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic_fr"><img src="./cjnow/3.png" alt="pic1"></div>
+                                    <div class="pic_hd"><span class="ht_ico best"></span><span
+                                            class="starating on"></span></div>
+                                    <h3 class="pic_tit">CJ프레시웨이, 5년째 청년 대상 외식 분야 교육 지원 “청년이여, 외식 전문가를 꿈꾸라”</h3>
+                                    <p class="pic_com">CJ프레시웨이, 2018년부터 CJ도너스캠프 꿈키움 아카데미 통해 수료생 137명 채용</p>
+                                    <p class="pic_info">청년들에게 외식∙서비스 분야 전문가로 성장 기회 제공</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic_fr"><img src="./cjnow/4.png" alt="pic1"></div>
+                                    <div class="pic_hd"><span class="ht_ico best"></span><span
+                                            class="starating on"></span></div>
+                                    <h3 class="pic_tit">CJ올리브네트웍스, AI 보이스 도슨트로 신개념 관람 문화 선사</h3>
+                                    <p class="pic_com">CJ올리브네트웍스, 음성합성기술인 보이스 클로닝 활용해AI 도슨트 서비스 선보여</p>
+                                    <p class="pic_info">tvN 화면 해설 방송에 이어 AI 도슨트 서비스 등 고객에게 차별화된 경험 선사</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic_fr"><img src="./cjnow/5.jpg" alt="pic1"></div>
+                                    <div class="pic_hd"><span class="ht_ico best"></span><span
+                                            class="starating on"></span></div>
+                                    <h3 class="pic_tit">CJ제일제당, 유한킴벌리와 손잡고 PHA 활용한 제품 개발 확대</h3>
+                                    <p class="pic_com">친환경 혁신 기업간 협력체 ‘그린 액션 얼라이언스(Green Action Alliance)’에 동참하는 MOU체결
+                                    </p>
+                                    <p class="pic_info">PHA 등 생분해 소재 적용한 기저귀, 물티슈, 마스크 등 소비자와 친숙한 품목 개발 추진</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic_fr"><img src="./cjnow/6.png" alt="pic1"></div>
+                                    <div class="pic_hd"><span class="ht_ico best"></span><span
+                                            class="starating on"></span></div>
+                                    <h3 class="pic_tit">CGV, 월 구독 서비스 ‘CGV PLUS’ 론칭</h3>
+                                    <p class="pic_com">CGV 영화 관람과 TVING 이용권 혜택 함께 누리는 구독 서비스</p>
+                                    <p class="pic_info">영화 관람/동반인 할인/매점 할인 2회, TVING 스탠다드 1개월 ‘CGV PLUS DOUBLE’</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic_fr"><img src="./cjnow/7.png" alt="pic1"></div>
+                                    <div class="pic_hd"><span class="ht_ico best"></span><span
+                                            class="starating on"></span></div>
+                                    <h3 class="pic_tit">[리얼레시피] 싸와디캅~코쿤캅~🙏'방'콕에서 만들어 먹는 #치킨에그팟타이 레시피 大공개! 🥢</h3>
+                                    <p class="pic_com">오늘의 방구석 요리는? 빠-밤! 집에서 뚝딱~뚝딱~ 만든 '치킨 에그 팟타이'로 도전장을 내민다!</p>
+                                    <p class="pic_info">우리 같이 '방'콕으로 떠나요! ✈💙</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+    </div>
+    <script>
+        var sel = document.getElementsByClassName("sel");
+        for (var i = 0; i < sel.length; i++) {
+            sel[i].addEventListener("change", function () {
+                location.href = this.value;
+            });
+        }
+    </script>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_logo"><img src="img/CJ_logo.png" alt=""></div>
+            <div class="mid_box">
+                <nav class="fnb">
+                    <a href="member01.html" class="dpc"> 개인정보 처리 방침</a>
+                    <a href="member02.html" class="dpc"> 이용약관</a>
+                    <a href="member03.html" class="dpc"> 공지사항</a>
+                    <a href="member04.html" class="dpc"> 온라인제보</a>
+                    <a href="member05.html" class="dpc"> 고객센터</a>
+                </nav>
+                <p class="addr">
+                    CJ 그룹 | 대표이사 | 정호영 사업자등록번호:120-81-55297<br>
+                    서울시 영등포구 여의대로 128 LG 트윈타워 |admin@wedisplay.solutions<br>
+                    통신판매업신고번호: 제2022-서울영등포-1247호<br>
+                    당 사는 통신판매중개자이며, 통신 판매의 당사자가 아닙니다. 상품 및 거래에 관한 의무와 책임은 판매자에게 있습니다.
+                </p>
+                <p class="copyright">씨제이㈜. All Rights Reserved.</p>
+            </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">패밀리 사이트</option>
+                    <option value="https://www.cjenm.com/ko/">Cj ENM 엔터테인먼트</option>
+                    <option value="https://www.oliveyoung.co.kr">>CJ올리브영</option>
+                    <option value="https://www.cj.co.kr/kr/index">CJ제일제당</option>
+                    <option value="https://www.cjfoodville.co.kr/main.asp">CJ푸드빌</option>
+                    <option value="http://www.cjfreshway.com/index.jsp">CJ 제일제당</option>
+                    <option value="https://www.cj.co.kr/kr/index">CJ프레시웨이</option>
+                    <option value="http://www.cj.co.kr/kr/about/business/bio">CJ제일제당 BIO사업부문</option>
+                    <option value="https://www.cjlogistics.com/ko/main">CJ대한통운</option>
+                    <option value="https://www.cjolivenetworks.co.kr/">CJ올리브네트웍스</option>
+
+                </select>
+            </div>
+            <script>
+                function sel_link(sel) {
+                    location.href = sel.value;
+                }
+            </script>
+        </div>
+    </footer>
+    </div>
+    <a href="#" class="to_top">↑</a>
+    <!--#만 넣으면 뿅하고올라감-->
+    <!--to.top_on 제이쿼리로 온클래스추가-->
+</body>
+
+</html>

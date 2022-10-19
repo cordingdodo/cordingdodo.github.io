@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ 그룹</title>
+    <!-- 메타포 -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- 오픈그래프 -->
+    <meta property="og:site_name" content="WE DISPLAY">
+    <meta property="og:title" content="WE DISPLAY">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요.">
+    <meta property="og:image" content="./img/icon/share.png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favi.png">
+    <!-- 각 종 플러그인과 설정 파일 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- 구형 브라우저 html5태그 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- 구형 브라우저에서 css animation 인식 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- jquery 플러그인 연결 -->
+    <script src="./js/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="header.css">
+    <style>
+        /* header.css */
+        .hd { position:fixed; }
+    
+        /* content */
+        .vs { clear:both; width: 100%; height:300px; overflow: hidden; }
+        .vs img { display:block; width: 100%; height:auto; }
+        .bread { clear:both; width: 100%; line-height: 60px; border-bottom:3px solid #eee; }
+        .bread_fr { width: 1200px; margin: 0 auto; }
+        .page { clear:both; width: 100%; min-height:100vh;}
+        .page:after { content:""; display:block; clear:both; }
+        .page_wrap { width: 1200px; margin: 0 auto; }
+        .page2 {clear:both; width: 100%; min-height:100vh; padding-top: 100px;}
+        .page2_wrap { width: 1200px; margin: 0 auto; }
+        .page_lst{ width: 1200px; margin: 0 auto; }
+        /* .content { display:none; }
+        .content:target { display:block; } */
+        .page_title {padding-top: 50px; font-size:25px; }
+    
+        .noti_lst { width:1200px; float:left; padding-top: 50px; text-align: center;}
+        .noti_lst li { clear:both; height:50px; border-bottom:1px solid #333;
+        box-sizing:border-box; }
+        .noti_lst li:first-child { border-top:2px solid #333; }
+        .noti_lst li:last-child { border-bottom:2px solid #333; }
+        .noti_lst li span { display:block; box-sizing:border-box; float:left;
+        line-height: 32px; font-size:14px; padding-top: 15px;}
+        .noti_num { width: 100px; text-align:center; }
+        .not_tit { width: 700px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+        .item_hd { font-weight:600; }
+        .not_tit.item_hd { text-align: center; }
+        .not_tit a { display: block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-right: 12px; color:#333; }
+        .noti_auth { width: 150px; text-align: center; }
+        .noti_date { width: 180px; text-align: center; }
+        
+        .thumb_lst { width:50%; float:left; margin-bottom: 50px; }
+        .thumb_lst li { clear:both; border-bottom:3px solid #ececec; height: 150px; 
+        border-right:3px solid #ececec; }
+        .thumb_lst li:first-child { border-top:3px solid #ececec; }
+        .thumb_lst li a { display:block; }
+        .thumb_lst li .img_fr { width: 120px; height: 130px; overflow:hidden; float:left;}
+        .thumb_lst li .img_fr img { display:block; width: 100%; height:auto; 
+        margin-top: 20px; }
+        .thumb_lst li .com_fr { padding-left: 30px; float:left; color:#333; }
+        .thumb_tit { line-height: 2.4; text-overflow: ellipsis; overflow: hidden; white-space:nowrap; font-weight:bolder; font-size: 20px;}
+        .thumb_com { line-height:2; text-overflow: ellipsis; overflow: hidden; white-space:nowrap; font-weight: bold;}
+        .thumb_sub { line-height: 1.8; text-overflow: ellipsis; overflow: hidden; white-space:nowrap; }
+        .thumb_sub2 { line-height: 1.8; text-overflow: ellipsis; overflow: hidden; white-space:nowrap; }
+            
+
+
+
+        .to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
+        background-color:rgba(11,11,11,0.75); color:#fff; display:block; width: 60px;
+        height: 60px; line-height: 60px; text-align: center; font-size:20px; border-radius:32px; visibility:hidden; transition-duration:0.8s; }
+        .to_top:hover { background-color: deepskyblue; }
+        .to_top.on { visibility: visible; }
+        </style>
+        <link rel="stylesheet" href="footer.css">
+        <script>
+        $(document).ready(function(){
+            $(".to_top").attr("href", location.href);
+            $(window).scroll(function(){
+                var ht = $(window).height();
+                var tp = $(this).scrollTop();
+                if(tp>=300){
+                    $(".to_top").addClass("on");
+                    $(".to_top").attr("href", location.href);
+                } else {
+                    $(".to_top").removeClass("on");
+                    $(".to_top").attr("href", location.href);
+                }
+            });
+        });    
+        </script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="index.html" class="logo"><img src="img/CJ_logo.png" alt="로고"></a>
+            <nav class="tnb">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+                <a href="sitemap.html">사이트맵</a>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li class="item1">
+                        <a href="" class="dp1">CJ Now</a>
+                    <li class="item2">
+                        <a href="" class="dp1">Brand</a>
+                        <ul class="sub">
+                            <li><a href="brand.html#page1">Best brand</a></li>
+                            <li><a href="brand.html#page2">건강</a></li>
+                            <li><a href="brand.html#page3">즐거움</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dp1">Sustainability</a>
+                        <ul class="sub">
+                            <li><a href="susta.html#page1">지향점</a></li>
+                            <li><a href="susta.html#page2">운영재단</a></li>
+                            <li><a href="susta.html#page3">나눔재단</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="" class="dp1">CJ소개</a>
+                        <ul class="sub">
+                            <li><a href="company.html#page1">회사소개</a></li>
+                            <li><a href="company.html#page2">회사연혁</a></li>
+                            <li><a href="company.html#page3">계열사</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="" class="dp1">인재 채용</a>
+                        <ul class="sub">
+                            <li><a href="job.html1#page1">채용공고</a></li>
+                            <li><a href="job.html1#page2">직무정보</a></li>
+                            <li><a href="job.html1#page3">게시판</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content" id="page1">
+        <figure class="vs">
+            <imc src="" alt="">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel1" id="sel1" class="sel">
+                    <option>인재채용</option>
+                    <option value="cjnow.html#page1">Cj now</option>
+                    <option value="brand.html#page1">Brand</option>
+                    <option value="company.html#page1">CJ 소개</option>
+                    <option value="job.html1#page1">인재 채용</option>
+             </select> &gt;
+             <select name="sel1" id="sel1" class="sel">
+                <option selected>채용공고</option> 
+                <option value="job.html1#page2">직무정보</option>
+                <option value="job.html1#page3">게시판</option>
+                </select>
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">채용 공고</h2>
+                <ul class="noti_lst">
+                    <li>
+                        <span class="noti_num item_hd">번호</span>
+                        <span class="not_tit item_hd">공고명</span>
+                        <span class="noti_auth item_hd">대상</span>
+                        <span class="noti_date item_hd">접수기한</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">1</span>
+                        <span class="not_tit"><a href="">2022년 하반기 CJ ENM(커머스부문) IT개발 신입사원 모집</a></span>
+                        <span class="noti_auth">신입</span>
+                        <span class="noti_date">2022.10.18~2022.10.30</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">2</span>
+                        <span class="not_tit"><a href="">[현지채용] KCON 마케팅 (Marketing) / CJ ENM 미국법인(LA) New</a></span>
+                        <span class="noti_auth">신입</span>
+                        <span class="noti_date">2022.10.18 ~ 2022.11.13</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">3</span>
+                        <span class="not_tit"><a href="">[현지채용] 컨벤션 기획/운영(Convention) / CJ ENM 미국법인(LA) New</a></span>
+                        <span class="noti_auth">신입</span>
+                        <span class="noti_date">2022.10.18 ~ 2022.11.13</span>
+                    </li>
+                    <li><span class="noti_num">4</span>
+                        <span class="not_tit"><a href="">CJ올리브영 구매 담당</a></span>
+                        <span class="noti_auth">경력</span>
+                        <span class="noti_date">2022.10.17 ~ 2022.11.11</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">5</span>
+                        <span class="not_tit"><a href="">CJ올리브영 올리브영 PB 브랜드 운영 BM</a></span>
+                        <span class="noti_auth">경력</span>
+                        <span class="noti_date">2022.10.17 ~ 2022.11.11</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">6</span>
+                        <span class="not_tit"><a href=""></a>[CJ프레시웨이] 외식영업(동부권) 경력사원 모집</span>
+                        <span class="noti_auth">경력</span>
+                        <span class="noti_date">2022.10.17 ~ 2022.10.31</span>
+                    </li>
+                    <li><span class="noti_num">7</span>
+                        <span class="not_tit"><a href="">[CJ푸드빌] 외식브랜드 인턴매니저(월급제사원) 모집</a></span>
+                        <span class="noti_auth">신입</span>
+                        <span class="noti_date">2022.10.17 ~ 2022.10.31</span>
+                    </li>
+                    <li><span class="noti_num">8</span>
+                        <span class="not_tit"><a href="">[지역인재 공개채용] 택배운영 신입사원 모집</a></span>
+                        <span class="noti_auth">신입</span>
+                        <span class="noti_date">2022.10.14 ~ 2022.10.30</span>
+                    </li>
+                    <li><span class="noti_num">9</span>
+                        <span class="not_tit"><a href="">CJ ENM 커머스부문 브랜드자회사 리빙 오프라인 영업 경력채용</a></span>
+                        <span class="noti_auth">경력</span>
+                        <span class="noti_date">2022.10.14 ~ 2022.10.24</span>
+                    </li>
+                    <li><span class="noti_num">10</span>
+                        <span class="not_tit"><a href="">[경력채용] 플랫폼 마케팅(Mnet Plus) / CJ ENM 엔터테인먼트부문</a></span>
+                        <span class="noti_auth">경력</span>
+                        <span class="noti_date">2022.10.14 ~ 2022.10.23</span>
+                    </li>
+                </ul>
+                     </div>
+                 </div>
+    </section>
+    </div>
+    <div class="content" id="page2">
+        <div class="content" id="page1">
+            <figure class="vs">
+                <imc src="" alt="">
+            </figure>
+            <div class="bread">
+                <div class="bread_fr">
+                    <a href="index.html" class="home">HOME</a> &gt;
+                    <select name="sel1" id="sel1" class="sel">
+                        <option>인재채용</option>
+                        <option value="cjnow.html#page1">Cj now</option>
+                        <option value="brand.html#page1">Brand</option>
+                        <option value="company.html#page1">CJ 소개</option>
+                        <option value="job.html1#page1">인재 채용</option>
+                 </select> &gt;
+                 <select name="sel1" id="sel1" class="sel">
+                    <option selected>직무정보</option> 
+                    <option value="job.html1#page1">채용공고</option>
+                    <option value="job.html1#page3">게시판</option>
+                    </select>
+                </div>
+            </div>
+        <section class="page2">
+            <div class="page2_wrap">
+                    <h2 class="page_title">제일제당</h2>
+                    <br>
+                    <hr>
+                    <br>
+                    <ul class="thumb_lst">
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">기획/관리</p>
+                                <p class="thumb_sub">기업 운영의 場, 기획/관리 </p>
+                                <p class="thumb_sub2">철저한 주인의식, 끈기와 열정이 요구됩니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">사업관리</p>
+                                <p class="thumb_sub">“기업 운영의 장, 사업관리”</p>
+                                <p class="thumb_sub2">최고의 경영전략가, 기업 운영가를 꿈꿉니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">구매</p>
+                                <p class="thumb_sub">회사의 손익과 직결된 Strategic Buyer</p>
+                                <p class="thumb_sub2">구매전문가를 넘어 식품전문가로 성장할 수 있습니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">ESG (기획)</p>
+                                <p class="thumb_sub">기업의 지속가능성 확보를 위한 ESG 기획 및 운영</p>
+                                <p class="thumb_sub2">회사의 성장과 함께 글로벌 중심의 미래 성장 동력을 주도</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">Communication (홍보)</p>
+                                <p class="thumb_sub">기업의 대변인, 홍보</p>
+                                <p class="thumb_sub2">창의적인 생각과 이를 추진할 수 있는 활동적인 에너지</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">IP(특허개발)</p>
+                                <p class="thumb_sub">기업의 무형자산 고부가가치화 사업의 <br>지식재산 리스크 매니징</p><br>
+                                <p class="thumb_sub2"></p>
+                            </div>
+                        </a>
+                    </li>
+                    </ul>
+                    <ul class="thumb_lst">
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">정보전략</p>
+                                <p class="thumb_sub">모든 사업은 IT를 통해 움직인다</p>
+                                <p class="thumb_sub2">현장에서 사용자가 필요로 하는 요구사항을 catch하는 역량 </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">정보보안</p>
+                                <p class="thumb_sub">회사의 정보 근간을 지키는 파수꾼</p>
+                                <p class="thumb_sub2">One Source Multi Use</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">IT개발</p>
+                                <p class="thumb_sub">BIO R&D IT시스템의 처음과 끝</p>
+                                <p class="thumb_sub2">IT 지식과 바이오 정보를 배우고자 하는 열정 </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">R&D(BIO) 화학</p>
+                                <p class="thumb_sub">아미노산 유도체 및 기능성 고분자를 설계/합성/분석하고<br> 수행할 수 있는 실무경험 전문지식이 필요함</p>
+                                <p class="thumb_sub2"></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">식품R&D Sensory Science</p>
+                                <p class="thumb_sub">다양한 조사 목적에 맞도록 실험을 설계하고 <br>수행할 수 있는 실무 경험과 전문지식이 필요</p>
+                                <p class="thumb_sub2"></p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./icon/cjj.png" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제일제당</h3>
+                                <p class="thumb_com">디지털마케팅</p>
+                                <p class="thumb_sub">플랫폼의 신규 고객 유입과 매출 성과 마케팅 업무수행</p>
+                                <p class="thumb_sub2">CJ제일제당에서 DTC마케팅 전문가로 성장할 수 있습니다</p>
+                            </div>
+                        </a>
+                    </li>
+                </div>
+                </div>   
+                <section class="page2">
+                    <div class="page2_wrap">
+                            <h2 class="page_title">CJ프레시웨이</h2>
+                            <br>
+                            <hr>
+                            <br>
+                            <ul class="thumb_lst">
+                            <li>
+                                <a href="">
+                                    <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                    <div class="com_fr">
+                                        <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                        <p class="thumb_com">전략기획</p>
+                                        <p class="thumb_sub">전사 전략 수립 및 실행유무 점검</p>
+                                        <p class="thumb_sub2">기획팀의 Leader로서 성장</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                    <div class="com_fr">
+                                        <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                        <p class="thumb_com">사업관리</p>
+                                        <p class="thumb_sub">본부 실적 관리 및 전략방향 제시</p>
+                                        <p class="thumb_sub2">사업전반에 대한 이해를 바탕으로 다양한 직무 연계</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                    <div class="com_fr">
+                                        <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                        <p class="thumb_com">식품안전</p>
+                                        <p class="thumb_sub">
+                                            Risk를 선제적으로 파악하고 사전 대응하는 Watch Dog</p>
+                                        <p class="thumb_sub2">식품안전 전문가로 성장해 나갈 수 있습니다</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                    <div class="com_fr">
+                                        <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                        <p class="thumb_com">위생안전</p>
+                                        <p class="thumb_sub">단체급식 점포의 Risk 사전 예방 관리</p>
+                                        <p class="thumb_sub2">현장과의 소통을 위한 커뮤니케이션능력이 필요합니다</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                    <div class="com_fr">
+                                        <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                        <p class="thumb_com">법무</p>
+                                        <p class="thumb_sub">대내외 Risk의 예방과 대응</p>
+                                        <p class="thumb_sub2"> 업무 경험을 통해 경영 법무 전문가로 성장할 수 있습니다</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                    <div class="com_fr">
+                                        <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                        <p class="thumb_com">물류기획</p>
+                                        <p class="thumb_sub">전사 공급망 (SCM) 관리, COST효율화</p>
+                                        <p class="thumb_sub2">SCM기획 전문가 및 물류운영 Specialist로 성장</p>
+                                    </div>
+                                </a>
+                            </li>
+                            </ul>
+                            <ul class="thumb_lst">
+                                <li>
+                                    <a href="">
+                                        <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                        <div class="com_fr">
+                                            <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                            <p class="thumb_com">정보전략</p>
+                                            <p class="thumb_sub">정보보호 관리체계 수립, 안전한 비즈니스 활동 지원</p>
+                                            <p class="thumb_sub2">글로벌 IT분야의 전문가로 성장할 수 있습니다</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                        <div class="com_fr">
+                                            <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                            <p class="thumb_com">데이터분석</p>
+                                            <p class="thumb_sub">전략적 의사결정을 지원하는 데이터 Scientist</p>
+                                            <p class="thumb_sub2">모든 산업분야 핵심으로 떠오르는 "데이터 Scientist" 로 성장</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                        <div class="com_fr">
+                                            <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                            <p class="thumb_com">FS Menu R&D</p>
+                                            <p class="thumb_sub">
+                                                식문화 트렌드를 알고 구성원들의 식문화 역량 향상에<br>도움을 주는 Creative Supporter</p>
+                                            <p class="thumb_sub2"></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                        <div class="com_fr">
+                                            <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                            <p class="thumb_com">인테리어</p>
+                                            <p class="thumb_sub">공간을 지배하는 자!</p>
+                                            <p class="thumb_sub2">회사의 매출 향상에 기여하는 디자이너!</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                        <div class="com_fr">
+                                            <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                            <p class="thumb_com">마케팅</p>
+                                            <p class="thumb_sub">현장 중심의 통합 마케팅 커뮤니케이션 전문가</p>
+                                            <p class="thumb_sub2">B2B와 B2C를 아우르는 Hybrid 마케팅 전문가</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="img_fr"><img src="./icon/fresh.PNG" alt=""></div>
+                                        <div class="com_fr">
+                                            <h3 class="thumb_tit">CJ프레시웨이</h3>
+                                            <p class="thumb_com">MD(프레시웨이)</p>
+                                            <p class="thumb_sub">상품의 A부터 Z까지 관리하는 회사 이익의 책임자</p>
+                                            <p class="thumb_sub2"> MD 업무를 통한 전문성 강화를 바탕으로 구매 전문가</p>
+                                        </div>
+                                    </a>
+                                </li>
+                        </div>
+                    </div>
+                    <div class="page2">
+                    <div class="page2_wrap">
+                                <h2 class="page_title">CJ CGV</h2>
+                                <br>
+                                <hr>
+                                <br>
+                            <ul class="thumb_lst">
+                                <li>
+                                    <a href="">
+                                     <div class="img_fr"><img src="./icon/CGV.PNG" alt=""></div>
+                                     <div class="com_fr">
+                                             <h3 class="thumb_tit">CJ CGV</h3>
+                                            <p class="thumb_com">경영관리</p>
+                                            <p class="thumb_sub">"회사 전반의 경영 활동 조율자"</p>
+                                            <p class="thumb_sub2">다각도의 시야를 가진 Generalist로의 성장</p>
+                                        </div>
+                                    </a>
+                                <li>
+                                    <a href="">
+                                        <div class="img_fr"><img src="./icon/CGV.PNG" alt=""></div>
+                                         <div class="com_fr">
+                                                <h3 class="thumb_tit">CJ CGV</h3>
+                                                <p class="thumb_com">인사</p>
+                                                <p class="thumb_sub">"든든한 사업 파트너이자 조직 변화 관리의 근간"</p>
+                                                <p class="thumb_sub2">인사 전문가이자 최고 경영자로 성장의 초석</p>
+                                         </div>
+                                        </a>
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                        <div class="img_fr"><img src="./icon/CGV.PNG" alt=""></div>
+                                         <div class="com_fr">
+                                                <h3 class="thumb_tit">CJ CGV</h3>
+                                                <p class="thumb_com">재무</p>
+                                                <p class="thumb_sub">정확한 재무 정보를 제공하고, 재무 전략 수립 및 리스크 방어</p>
+                                                <p class="thumb_sub2">최고 경영자가 되기 위한 초석</p>
+                                         </div>
+                                        </a>
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                        <div class="img_fr"><img src="./icon/CGV.PNG" alt=""></div>
+                                         <div class="com_fr">
+                                                <h3 class="thumb_tit">CJ CGV</h3>
+                                                <p class="thumb_com">공간디자인</p>
+                                                <p class="thumb_sub">Global No.1 Cultureplex 공간 창출</p>
+                                                <p class="thumb_sub2">국내 최고의 극장 공간디자인 전문가</p>
+                                         </div>
+                                        </a>
+                                  </li>
+                            </ul>
+                           <ul class="thumb_lst">
+                            <li>
+                                <a href="">
+                                    <div class="img_fr"><img src="./icon/CGV.PNG" alt=""></div>
+                                     <div class="com_fr">
+                                            <h3 class="thumb_tit">CJ CGV</h3>
+                                            <p class="thumb_com">입지개발</p>
+                                            <p class="thumb_sub">국내외 최고의 입지 선점</p>
+                                            <p class="thumb_sub2">Global 부동산 전문가</p>
+                                     </div>
+                                    </a>
+                              </li>
+                              <li>
+                                <a href="">
+                                    <div class="img_fr"><img src="./icon/CGV.PNG" alt=""></div>
+                                     <div class="com_fr">
+                                            <h3 class="thumb_tit">CJ CGV</h3>
+                                            <p class="thumb_com">광고상품기획</p>
+                                            <p class="thumb_sub">미디어의 시작과 끝을 책임지는 전문가</p>
+                                            <p class="thumb_sub2">대한민국 최고를 넘어 글로벌 전문 미디어 스페셜리스트로</p>
+                                     </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="">
+                                    <div class="img_fr"><img src="./icon/CGV.PNG" alt=""></div>
+                                     <div class="com_fr">
+                                            <h3 class="thumb_tit">CJ CGV</h3>
+                                            <p class="thumb_com">광고데이터분석</p>
+                                            <p class="thumb_sub">광고 효과 및 트렌드 분석 전문가</p>
+                                            <p class="thumb_sub2">글로벌 데이터 분석 전문가로의 성장</p>
+                                     </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="">
+                                    <div class="img_fr"><img src="./icon/CGV.PNG" alt=""></div>
+                                     <div class="com_fr">
+                                            <h3 class="thumb_tit">CJ CGV</h3>
+                                            <p class="thumb_com">미디어사업전략</p>
+                                            <p class="thumb_sub">미디어 사업 전략 및 신규 사업 개발</p>
+                                            <p class="thumb_sub2">미디어사업 전략 및 신규사업기획자</p>
+                                     </div>
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+        </section>
+        <div class="content2">
+                    </ul>
+                </h3>
+            </h2>
+            </h2>
+           </div>
+        </section>
+                <div class="content" id="page3">
+        <figure class="vs">
+            <img src="./img/vs1.jpg" alt="">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel4" id="sel4" class="sel">
+                    <option>인재채용</option>
+                    <option value="cjnow.html#page1">Cj now</option>
+                    <option value="brand.html#page1">Brand</option>
+                    <option value="company.html#page1">CJ 소개</option>
+                    <option value="job.html1#page1">인재 채용</option>
+                </select> &gt; 
+                <select name="sel3" id="sel3" class="sel">
+                    <option selected>게시판</option> 
+                    <option value="job.html1#page1">채용공고</option>
+                    <option value="job.html1#page2">직무정보</option>
+                </select>
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">게시판</h2>
+                <ul class="noti_lst">
+                    <li>
+                        <span class="noti_num item_hd">번호</span>
+                        <span class="not_tit item_hd">제목</span>
+                        <span class="noti_auth item_hd">작성자</span>
+                        <span class="noti_date item_hd">날짜</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">1</span>
+                        <span class="not_tit"><a href="">세상 뻘쭘한 짱구 아빠</a></span>
+                        <span class="noti_auth">아가리카노</span>
+                        <span class="noti_date">2022110-19</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">2</span>
+                        <span class="not_tit"><a href="">글제목</a></span>
+                        <span class="noti_auth">도욘</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">3</span>
+                        <span class="not_tit"><a href="">글제목2</a></span>
+                        <span class="noti_auth">도욘</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">4</span>
+                        <span class="not_tit"><a href="">글제목3</a></span>
+                        <span class="noti_auth">도욘</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">5</span>
+                        <span class="not_tit"><a href="">글제목4</a></span>
+                        <span class="noti_auth">도욘</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">6</span>
+                        <span class="not_tit"><a href="">글제목5</a></span>
+                        <span class="noti_auth">도욘</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">7</span>
+                        <span class="not_tit"><a href="">글제목6</a></span>
+                        <span class="noti_auth">도욘</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">8</span>
+                        <span class="not_tit"><a href="">글제목7</a></span>
+                        <span class="noti_auth">도욘</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">9</span>
+                        <span class="not_tit"><a href="">글제목8</a></span>
+                        <span class="noti_auth">도욘</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">10</span>
+                        <span class="not_tit"><a href="">글제목9</a></span>
+                        <span class="noti_auth">도욘</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                </ul>
+                     </div>
+                 </div>
+    </section>
+    </div>
+    <script>
+   var sel = document.getElementsByClassName("sel");
+    for(var i=0;i<sel.length;i++){
+        sel[i].addEventListener("change", function(){
+            location.href = this.value;
+        });
+    }
+    </script>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_logo"><img src="img/CJ_logo.png" alt=""></div>
+            <div class="mid_box">
+                <nav class="fnb">
+                    <a href="member01.html" class="dpc"> 개인정보 처리 방침</a>
+                    <a href="member02.html" class="dpc"> 이용약관</a>
+                    <a href="member03.html" class="dpc"> 공지사항</a>
+                    <a href="member04.html" class="dpc"> 온라인제보</a>
+                    <a href="member05.html" class="dpc"> 고객센터</a>
+                </nav>
+                <p class="addr">
+                    CJ 그룹 | 대표이사 | 정호영 사업자등록번호:120-81-55297<br>
+                    서울시 영등포구 여의대로 128 LG 트윈타워 |admin@wedisplay.solutions<br>
+                    통신판매업신고번호: 제2022-서울영등포-1247호<br>
+                    당 사는 통신판매중개자이며, 통신 판매의 당사자가 아닙니다. 상품 및 거래에 관한 의무와 책임은 판매자에게 있습니다.  
+                </p>
+                <p class="copyright">씨제이㈜. All Rights Reserved.</p>
+            </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">패밀리 사이트</option>
+                    <option value="https://www.cjenm.com/ko/">Cj ENM 엔터테인먼트</option>
+                    <option value="https://www.oliveyoung.co.kr">>CJ올리브영</option>
+                    <option value="https://www.cj.co.kr/kr/index">CJ제일제당</option>
+                    <option value="https://www.cjfoodville.co.kr/main.asp">CJ푸드빌</option>
+                    <option value="http://www.cjfreshway.com/index.jsp">CJ 제일제당</option>
+                    <option value="https://www.cj.co.kr/kr/index">CJ프레시웨이</option>
+                    <option value="http://www.cj.co.kr/kr/about/business/bio">CJ제일제당 BIO사업부문</option>
+                    <option value="https://www.cjlogistics.com/ko/main">CJ대한통운</option>
+                    <option value="https://www.cjolivenetworks.co.kr/">CJ올리브네트웍스</option>
+
+                </select>
+            </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+</div>
+<a href="#" class="to_top">↑</a> <!--#만 넣으면 뿅하고올라감--> <!--to.top_on 제이쿼리로 온클래스추가-->
+</body>
+</html>
