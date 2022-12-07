@@ -1,0 +1,416 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>장소 상세보기</title>
+    
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<style>
+
+body, html { font-family: 'Noto Sans KR', sans-serif; }
+.table { min-width:960px; }
+#logo2 { display:block; width:73px; height:67px; background-color:white; background-image:("/pro03/img/logo.gif");
+background-size:85% auto; background-repeat:no-repeat; background-position:center center; }
+#nav-group { border-bottom:3px solid #ddd; }
+#gnb .navbar-link::after { content:""; display:none; }
+#sidebar .navbar { display:block; width:100%; background-color:transparent; }
+#sidebar .navbar-item { float:none; clear:both; display:block; width:100%; }
+#frm1.search_form { border-top:2px solid #ddd; border-bottom:2px solid #ddd; height:60px; padding-top:10px; padding-bottom:10px;  }
+#frm1 .inline { width:70%; float:left; margin-right:2%; }
+#frm1.search_form .inline { display:inline-block; width:auto; } 
+.navbar-item.has-dropdown.is-hoverable { min-width:110px; position:static; }
+.navbar-item.has-dropdown.is-hoverable a { font-weight:800; }
+.navbar-item.has-dropdown.is-hoverable.single { position:relative; }
+#nav .navbar-dropdown.cate { min-width:940px; width:940px; position:absolute; left:50px; }
+#nav .navbar-dropdown.single { min-width:150px; width:150px; left:auto; top:68px; }
+#nav .navbar-dropdown.cate a { display:inline-block; padding:8px; margin-right:20px;  
+width:120px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; 
+font-weight:500; }
+#nav .navbar-dropdown.single a { display:inline-block; width:150px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; 
+font-weight:500; }
+p.title { font-size:1.4rem; }
+p.subtitle { font-size:1.1rem; }
+.item_com {   overflow: hidden;  text-overflow: ellipsis;  display: -webkit-box;
+  -webkit-line-clamp: 3;  -webkit-box-orient: vertical; font-size:0.9rem; }
+.breadcrumb ul li:last-child { padding-right:1.5rem; }
+p.comment2 { max-width:400px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; 
+max-height:40px; }
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://s1.daumcdn.net/svc/attach/U03/cssjs/mapapidoc/1421136453605/service.min.css">
+	<style>
+	body { background:white; }
+	</style>	
+	<script type="text/javascript" src="http://dmaps.daum.net/map_js_init/v3.js"></script>
+	<script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.11.0.js"></script>	
+	<script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U0301/cssjs/JSON-js/fc535e9cc8/json2.min.js"></script>
+  </head>
+  <body class="web guide" data-page_section="web" data-page_type="guide" data-title="Daum 지도 Web API 가이드">
+  
+
+
+    <div id="nav-group">
+        <div class="container"> 
+              <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
+                <div class="navbar-brand">
+                        <a href="index.html" target="_blank"><img src="./img/logo.gif" alt="logo" style="width:120px;height:auto;"></a>
+                  
+              
+                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                  </a>
+                </div>
+              
+                <div id="navbarBasicExample" class="navbar-menu">
+                  <div class="navbar-start" id="gnb">
+                      <!-- ajax로 메뉴 로딩하여 추가하기 -->
+                      <div class="navbar-item has-dropdown is-hoverable">
+                          <a href="tourA.html" class="navbar-link">
+                                관광
+                          </a>
+                          <div class="navbar-dropdown cate" id="cate01"><a href="tourA1.html">사적</a><a href="tourA2.html">선유도</a></div>
+                      </div>
+                      <div class="navbar-item has-dropdown is-hoverable">
+                          <a href="tourB.html" class="navbar-link cate">
+                                체험
+                          </a> 
+                             <div class="navbar-dropdown cate" id="cate02"><a href="tourB1.html">금강미래체험관</a><a href="tourB2.html">곤충체험학습농장</a></div>
+                      </div>
+                      <div class="navbar-item has-dropdown is-hoverable">
+                          <a href="tourC.html" class="navbar-link cate">
+                                행사
+                          </a>
+                             <div class="navbar-dropdown cate" id="cate03"><a href="tourC1.html">군산시간여행축제</a><a href="tourC2.html">군산꽁당보리축제</a></div>
+                      </div>
+                      <div class="navbar-item has-dropdown is-hoverable">
+                          <a href="tourD.html" class="navbar-link cate">
+                                축제
+                          </a>
+                          <div class="navbar-dropdown cate" id="cate04"><a href="tourD1.html">진포예술제</a><a href="tourD2.html">최호장군 추모제</a></div>
+                      </div>
+                      <div class="navbar-item has-dropdown is-hoverable">
+                          <a href="tourE.html" class="navbar-link cate">
+                                숙박
+                          </a>
+                          <div class="navbar-dropdown cate" id="cate05"><a href="tourE1.html">리틀프린스 관광호텔</a><a href="tourE1.html">스테이 따숨과 이룸</a></div>
+                      </div>	
+                      <div class="navbar-item has-dropdown is-hoverable">
+                          <a href="tourF.html" class="navbar-link cate">
+                                음식
+                          </a>
+                          <div class="navbar-dropdown cate" id="cate06"><a href="tourF1.html">째보식당</a><a href="tourF2.html">매주육일</a></div>
+                      </div>
+                      <div class="navbar-item has-dropdown is-hoverable">
+                          <a href="tourG.html" class="navbar-link cate">
+                                쇼핑
+                          </a>
+                      <div class="navbar-dropdown cate" id="cate07"><a href="tourG.html">울외장아찌</a></div>
+                      </div>
+                      <div class="navbar-item has-dropdown is-hoverable single">
+                          <a class="navbar-link" href="support.html">
+                                관광안내
+                          </a>
+                          <div class="navbar-dropdown single">
+                               <a class="navbar-item" href="notice.html">
+                                     공지사항
+                               </a>
+                          </div> 
+                      </div>
+                      <div class="navbar-item has-dropdown is-hoverable single">
+                          <a class="navbar-link">
+                                군산에 대해
+                          </a>
+                      
+                          <div class="navbar-dropdown single">
+                            <a class="navbar-item">
+                              About
+                            </a>
+                            <a class="navbar-item">
+                              Jobs
+                            </a>
+                            <a class="navbar-item">
+                              Contact
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">
+                              Report an issue
+                            </a>
+                          </div>
+                    </div>
+                  </div>
+                  
+                  <div class="navbar-end" id="tnb">
+                    <div class="navbar-item">
+                        
+                <div class="buttons">
+                  <a href="join.html" class="button is-primary">
+                    <strong>Sign up</strong>
+                  </a>
+                  <a href="login.html" class="button is-light">
+                    Log in
+                  </a>
+                   </div>
+                  
+                  
+                </div>
+              </div>
+                </div>
+              </nav>
+          <script>
+          $(document).ready(function(){
+              $.ajax({
+                  url:"/pro03/MemuLoadCtrl.do",
+                  type:"POST",
+                  enctype:"UTF-8",
+                  datatype:"json",
+                  processData:false,
+                  contentType:false, 
+                  cache:false,
+                  success:function(data){
+                      $(".navbar-dropdown.cate").empty();
+                      //var trans = data;
+                      var trans = $.parseJSON(data);
+                      console.log(trans);
+                      $.each(trans, function(key, value){
+                          if(key=="data"){
+                              for(var i=0;i<value.length;i++){
+                                  if(value[i].cate=="A"){
+                                      $("#cate01").append("<a href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                  } else if(value[i].cate=="B"){
+                                      $("#cate02").append("<a href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                  } else if(value[i].cate=="C"){
+                                      $("#cate03").append("<a href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                  } else if(value[i].cate=="D"){
+                                      $("#cate04").append("<a href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                  } else if(value[i].cate=="E"){
+                                      $("#cate05").append("<a href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                  } else if(value[i].cate=="F"){
+                                      $("#cate06").append("<a href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                  } else if(value[i].cate=="G"){
+                                      $("#cate07").append("<a href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                  }
+                              }
+                          }
+                      });
+                      
+                  }
+              });
+          });
+          </script>
+          </div>
+      </div>
+	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
+	  <ul style="float:right;">
+	    <li><a href="/pro03/">Home</a></li>
+	    <li><a href="/pro03/GetTourListCtrl.do">전체 장소</a></li>
+	    <li><a href="/pro03/GetTourCateListCtrl.do?cate=B">
+ 			 
+			
+			
+			<span>체험</span>
+			
+			
+			
+			
+			
+			
+			
+	    </a></li>
+	    <li class="is-active"><a href="#" aria-current="page">금강미래체험관</a></li>
+	  </ul>
+	</nav>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">금강미래체험관 상세보기</h1>
+      	<div id="con">
+      		<table class="table">
+      			
+      			<tr>
+				
+				<td>
+					<img src="/pro03/upload/22.jpg" class="lazy" onerror="this.style.display='none'" alt="배너" />
+					<!-- onerror="this.style.display='none'"  -->
+	      		</td>
+					
+		    	</tr>
+		    	
+				
+		  </tbody>
+		</table>
+      	</div>
+		<table class="table">
+		   <tbody>
+		    <tr>
+		      <th style="min-width:180px;">번호</th>
+		      <td>7</td>
+		    </tr>
+		    <tr>
+		      <th>분류</th>
+		      <td>
+   				 
+				
+				
+				<span>체험</span>
+				
+				
+				
+				
+				
+				
+				
+		      </td>
+		    </tr>
+		    <tr>
+		      <th>장소 번호</th>
+		      <td><p>B0007</p>
+		      	<input type="hidden" name="tourno" id="tourno" value="B0007" />
+		      </td>
+		    </tr>
+		    <tr> 
+		      <th>장소명</th>
+		      <td>
+				금강미래체험관
+		      </td>	
+		    </tr>
+		    <tr>
+		      <th>장소 주요 설명</th>
+		      <td><p>금강 철새 조망대는 해마다 겨울이 되면 철새들이 날아오는 서해안의 넓은 갯벌과 갈대밭에 건립되었다.
+조망대에 오른 관광객들이 철새들이 서식하는 장면을 관찰하면서 자연 풍경의 아름다움을 느끼고 생태계를 보호하는 것이 중요한 일임을 느끼도록 할 목적으로 만들었고, 다양한 철새의 모습에서 금강호의 환경을 보호하여 더 많은 종류의 새들이 찾아오도록 기원할 수 있는 마음을 가질 수 있도록 한 것이다.</p></td>
+		    </tr>
+		    <tr>
+		      <th>장소 상세 설명</th>
+		      <td><p>(3월~10월) 09:00 ~ 18:00
+(11월~2월) 09:00 ~ 17:00
+매주 월요일 휴관
+
+금강미래체험관
+
+문의처 :
+063-454-5683
+
+주소 :
+전라북도 군산시 성산면 철새로 120</p></td>
+		    </tr>
+		    <tr>
+		    	<th>주소</th>
+		    	<td>
+		    		<input type="hidden" name="addr" id="addr" value="" />
+		    		<input type="hidden" name="place" id="place" value="금강미래체험관" />
+		    	</td>
+		    </tr>
+		  </tbody>
+		</table>
+		<div style="clear:both; margin-bottom:20px; padding-bottom:20px; ">
+			<div id="map" style="margin-left:120px;	margin-top:50px; width:800px;height:600px; background:white; "></div>
+			<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+			<!-- https://developers.kakao.com/ 회원가입 후 -> 내 애플리케이션 -> 애플리케이션 추가 -> 추가된 해당 앱을 클릭하면 발급받은  API키를 확인할 수 있음  -->			
+			<script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=5642b250a7dfd72abf01f58dab2b1af9&​libraries=services"></script>
+			<script>
+			var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+			    mapOption = { //128.433182, 34.8544227
+			        center: new kakao.maps.LatLng(34.8544227, 128.433182), // 지도의 중심좌표
+			        level: 7 // 지도의 확대 레벨
+			    };  
+			
+			// 지도를 생성합니다    
+			var map = new kakao.maps.Map(mapContainer, mapOption); 
+			
+			// 주소-좌표 변환 객체를 생성합니다
+			var geocoder = new kakao.maps.services.Geocoder();
+			
+			// 주소로 좌표를 검색합니다
+			geocoder.addressSearch($("#addr").val(), function(result, status) {
+			
+			    // 정상적으로 검색이 완료됐으면 
+			     if (status === kakao.maps.services.Status.OK) {
+			
+			        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+			        // 결과값으로 받은 위치를 마커로 표시합니다
+			        var marker = new kakao.maps.Marker({
+			            map: map,
+			            position: coords
+			        });
+					
+			        // 인포윈도우로 장소에 대한 설명을 표시합니다
+			        var infowindow = new kakao.maps.InfoWindow({
+			            content: '<div style="width:150px;text-align:center;padding:6px 0;">'+$('#place').val()+'</div>'
+			        });
+			        infowindow.open(map, marker);
+			
+			        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+			        map.setCenter(coords);
+			    } 
+			});    
+			</script>
+		</div>
+		<div class="buttons">
+		  <a href="/pro03/GetTourListCtrl.do" class="button is-info">전체 목록</a>
+		  <a href="/pro03/GetTourCateListCtrl.do?cate=B" class="button is-info">카테고리 목록</a>
+		  
+		</div>
+    </div>
+  </section>
+  <script>
+  //image Lazy Loading : 실제로 사용자 화면에 보여질 필요가 있을 때까지 이미지 로딩을 지연하는 것으로 네트워크 대역폭을 줄이는 방법
+  /* document.addEventListener("DOMContentLoaded", function() {
+	  var lazyloadImages = document.querySelectorAll("img.lazy");    
+	  var lazyloadThrottleTimeout;
+	  
+	  function lazyload () {
+	    if(lazyloadThrottleTimeout) {
+	      clearTimeout(lazyloadThrottleTimeout);
+	    }    
+	    
+	    lazyloadThrottleTimeout = setTimeout(function() {
+	        var scrollTop = window.pageYOffset;
+	        lazyloadImages.forEach(function(img) {
+	            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+	              img.src = img.dataset.src;
+	              img.classList.remove('lazy');
+	            }
+	        });
+	        if(lazyloadImages.length == 0) { 
+	          document.removeEventListener("scroll", lazyload);
+	          window.removeEventListener("resize", lazyload);
+	          window.removeEventListener("orientationChange", lazyload);
+	        }
+	    }, 20);
+	  }
+	  
+	  document.addEventListener("scroll", lazyload);
+	  window.addEventListener("resize", lazyload);
+	  window.addEventListener("orientationChange", lazyload);
+	}); */
+  </script>
+	
+  
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

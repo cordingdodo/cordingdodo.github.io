@@ -1,0 +1,207 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>stockist</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="common.css">
+<style>
+.title {
+    padding-top: 36px;
+    padding-bottom: 20px;
+    color: #7BB1E8;
+}
+
+      .page {
+        clear: both;
+        width: 100%;
+        height: 500px;
+        margin-top: 30px;
+        
+      }
+
+      .page_wrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      
+		ul.left {
+		    text-align: right;
+		    float: left;
+		    width: 600px;
+		    margin-right: 100px;
+		}
+</style>
+
+
+    
+<style>
+ .btn-outline-success { color: #84c2ef; 
+    border-color: #e3f2fd; }
+ .btn-outline-success:hover {
+    color: #fff;
+    background-color: #84c2ef;
+    border-color: #84c2ef; }
+ .navbar-light .navbar-brand { color: #7bb1e8;}
+ .body {color : #71797e;}
+ 
+</style>
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+	  <a class="navbar-brand" href="/pro02/index.jsp">Swingset</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/pro02/swingset/swingset.jsp">Swingset<span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item dropdown">
+	     	<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+	          Archive</a>
+	          <div class="dropdown-menu">
+	          <a class="dropdown-item" href="/pro02/archive/22SS.jsp">22SS</a>
+	        </div>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+	          Shop
+	        </a>
+	        <div class="dropdown-menu">
+	          <a class="dropdown-item" href="/pro02/GetProductItemListCtrl?cateNo=1">RING</a>
+	          <a class="dropdown-item" href="/pro02/GetProductItemListCtrl?cateNo=2">EARRINGS</a>
+	          <div class="dropdown-divider"></div>
+	          <a class="dropdown-item" href="/pro02/GetProductItemListCtrl?cateNo=3">NECKLACE</a>
+	          <a class="dropdown-item" href="/pro02/GetProductItemListCtrl?cateNo=4">HAIR</a>
+	          <div class="dropdown-divider"></div>
+	          <a class="dropdown-item" href="/pro02/GetProductItemListCtrl?cateNo=5">KEYRING</a>
+	        </div>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/pro02/press/press.jsp">Press</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="true">
+	          Board
+	        </a>
+	        <div class="dropdown-menu">
+	          <a class="dropdown-item" href="/pro02/GetBoardListCtrl">Notice</a>
+	          <a class="dropdown-item" href="#">Q&A</a>
+	          <a class="dropdown-item" href="#">Use After</a>
+	        </div>
+	      </li>
+	     <li class="nav-item">
+	        <a class="nav-link" href="/pro02/stockist/stockist.jsp">stockist</a>
+	      </li>
+	    </ul>
+	    <ul class="nav justify-content-end">
+	    	
+	    		<li class="nav-item">
+	    			<span class="nav-link">관리자님</span>
+	    		</li>
+	    		<li class="nav-item">
+	    			<a class="nav-link active" href="/pro02/LogOutCtrl">로그아웃</a>
+	    		</li>
+	    		<li class="nav-item">
+	    			<a class="nav-link active" href="/pro02/GetCustomInfoCtrl">회원정보</a>
+	    		</li>
+
+	    	
+	    		<li class="nav-item">
+	    			<a class="nav-link" href="/pro02/admin/index.jsp">관리자 페이지로</a>
+	    			</li>
+	    		
+	    
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+	  </div>
+	</nav>
+
+</head>
+<body>
+       <section class="page" id="page1">
+          <div class="page_wrap">
+			<table class="lst">
+				<ul class="left">
+					<h3 class="title"><strong>KOREA</strong></h3>
+						<li><a href="https://gift.kakao.com/brand/11279" style="color:#7BB1E8; font-size:17px;'">KAKAOTALK</a></li>
+						<li><a href="https://www.musinsa.com/brands/swingset" style="color:#7BB1E8; font-size:17px; '">MUSINSA</a></li>
+						<li><a href="https://www.wconcept.co.kr/Search?kwd=SWINGSET" style="color:#7BB1E8; font-size:17px; '">WCONCEPT</a></li>
+					<br>
+					<br>
+					<h3 class="title"> <strong>CHINA</strong></h3>
+						<li><a style="color:#7BB1E8; font-size:17px;">MONOTE STORE</a></li>  
+						<li><a style="color:#7BB1E8; font-size:17px;">FLIPPED VINTAGE</a></li>
+						<li><a href="http://www.100bang.co.kr/" style="color:#7BB1E8; font-size:17px;">100BANG</a></li>
+						<li><a href="https://www.fdu.co.kr/cn/index.php" style="color:#7BB1E8; font-size:17px;">FDU</a></li>
+					<br>
+					<br>
+					<h3 class="title"> <strong>JAPAN</strong></h3>
+						<li><a style="color:#7BB1E8; font-size:17px;">SIXTY PERCENT </a></li>  
+						<li><a href="https://www.qoo10.jp/shop/sellerwork" style="color:#7BB1E8; font-size:17px;">Qoo10</a></li>
+						<li><a href="https://www.buyma.com/buyer/2687981.html" style="color:#7BB1E8; font-size:17px;">BUYMA</a></li>
+				 </ul>
+					<ul class="right">
+						<h3 class="title"> <strong>OFFLINE STORE</strong></h3> 
+						<li><a style="color:#7BB1E8; font-size:17px;">KKOTBATT<br> B1 40 Toegye-ro 27-gil, Seoul</a></li><br>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.673457032417!2d126.98903041539532!3d37.5627565321022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca37b4f4fc8bb%3A0xf2b1564181b329cd!2z6r2D67CtIEtLT1RCQVRU!5e0!3m2!1sko!2skr!4v1667986816863!5m2!1sko!2skr" 
+						width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</ul>
+          </table>          
+          </div>
+    </section>
+</body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ .ft_wrap { text-align: center; color: #7BB1E8; font-size: 10px; width: 1200px; margin-top: 300px;}
+ .ft_wrap {
+    margin-left: 0px;}
+ul{
+   list-style:none;
+   }
+</style>
+<meta charset="UTF-8">
+<meta charset="UTF-8">
+<title>footer</title>
+</head>
+<body>
+ <footer class="ft">
+        <div class="ft_wrap">
+            <div class="mid_box">
+            	<ul class="ft_ico_lst">
+            		<li>
+            		<a href=""><img src="./icon/insta.png" alt="인스타" style="width:20px"></a>
+            		<a href=""><img src="./icon/blog.png" alt="블로그" style="width:20px"></a>
+            		<a href=""><img src="./icon/twt.png" alt="트위터" style="width:20px"></a>
+            		</li>
+            		<li class="ft_cnt">
+						© SWINGSET / OWNER.WOOYEONPARK
+						<br><br><br>
+						
+						BUSINESS LICENSE. 465-19-01168
+						<br> 
+						ONLINE BUSINESS LICENSE. 2019-GOYANGDEOGYANG-GU-0987 
+						<br>
+						CONTACT. INFO@SWINGSET.CO.KR<br>
+						Mon-Fri 11:00am-5:00pm (WED/SAT/SUN/HOLIDAY OFF)<br><br>
+						이용약관개인정보처리방침<br>
+						Copyright ⓒ 2022 Swingset All rights reserved.
+						<br><br>
+					</li>
+				</ul>
+			</div>
+		</div>
+</footer>
+</body>
+</html>
+</html>
