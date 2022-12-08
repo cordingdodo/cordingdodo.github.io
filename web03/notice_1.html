@@ -1,44 +1,12 @@
 <!DOCTYPE html>
 <html>
-	<head>
- <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>장소 상세보기</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-<style>
-body, html { font-family: 'Noto Sans KR', sans-serif; }
-.table { min-width:960px; }
-#logo2 { display:block; width:73px; height:67px; background-color:white; background-image:("/pro03/img/logo.gif");
-background-size:85% auto; background-repeat:no-repeat; background-position:center center; }
-#nav-group { border-bottom:3px solid #ddd; }
-#gnb .navbar-link::after { content:""; display:none; }
-#sidebar .navbar { display:block; width:100%; background-color:transparent; }
-#sidebar .navbar-item { float:none; clear:both; display:block; width:100%; }
-#frm1.search_form { border-top:2px solid #ddd; border-bottom:2px solid #ddd; height:60px; padding-top:10px; padding-bottom:10px;  }
-#frm1 .inline { width:70%; float:left; margin-right:2%; }
-#frm1.search_form .inline { display:inline-block; width:auto; } 
-.navbar-item.has-dropdown.is-hoverable { min-width:110px; position:static; }
-.navbar-item.has-dropdown.is-hoverable a { font-weight:800; }
-.navbar-item.has-dropdown.is-hoverable.single { position:relative; }
-#nav .navbar-dropdown.cate { min-width:940px; width:940px; position:absolute; left:50px; }
-#nav .navbar-dropdown.single { min-width:150px; width:150px; left:auto; top:68px; }
-#nav .navbar-dropdown.cate a { display:inline-block; padding:8px; margin-right:20px;  
-width:120px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; 
-font-weight:500; }
-#nav .navbar-dropdown.single a { display:inline-block; width:150px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; 
-font-weight:500; }
-p.title { font-size:1.4rem; }
-p.subtitle { font-size:1.1rem; }
-.item_com {   overflow: hidden;  text-overflow: ellipsis;  display: -webkit-box;
-  -webkit-line-clamp: 3;  -webkit-box-orient: vertical; font-size:0.9rem; }
-.breadcrumb ul li:last-child { padding-right:1.5rem; }
-p.comment2 { max-width:400px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; 
-max-height:40px; }
-</style>
-<script src="https://code.jquery.com/jquery-latest.js"></script>
+    <title>공지사항 글쓰기</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
-  <body>
+  <body
 	<div id="nav-group">
 		<div class="container"> 
 			  <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
@@ -121,7 +89,6 @@ max-height:40px; }
 						  </div>
 					</div>
 				  </div>
-				  
 				  <div class="navbar-end" id="tnb">
 					<div class="navbar-item">
 						
@@ -180,83 +147,40 @@ max-height:40px; }
 		  </script>
 		  </div>
 	  </div>
-	<nav class="breadcrumb" aria-label="breadcrumbs"  style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
-		<ul style="float:right;">
-			<li><a href="index.html">Home</a></li>
-			<li class="is-active"><a href="/pro03/GetTourListCtrl.do" aria-current="page">전체 장소 목록</a>
-			<li class="is-active"><a href="#" aria-current="page">
-	      				
-			</a></li>
-		</ul>
-	  </nav>
-  	<section class="section">
-  		<div class="container">
-  			<h1 class="title">장소 상세보기</h1>
-  				<div id="con">
-  					<div class="tile is-ancestor columns" style="padding-bottom:40px;">
-  							
-  								
-  							 <div class="tile is-3" style="box-sizing:border-box;">
-			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">								
-  						<p class="title">째보식당</p>
-  						<p class="subtitle">
-			
-					     </p>
-					    <figure class="image is-4by3">
-					    	<img src="./img/6.jpg" alt="">
-					    </figure>									 					
-					    <div class="content" style="margin:10px;">
-					    	<p class="item_com">째보식당
-
-문의처 :
-063-443-5312
-
-주소 :
-군산시 구영3길 70 (영화동)
-
-영업시간 및 정기휴일 :
-주메뉴 :
-간장모둠장</p>
-					    </div>
-					    <a href="tourF1.html" class="button is-priprimary">자세히 보기</a>
-  						</article>
-  							</div>
-  								
-  							 <div class="tile is-3" style="box-sizing:border-box;">
-			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">								
-  						<p class="title">매주육일</p>
-  						<p class="subtitle">		
-					     </p>
-					    <figure class="image is-4by3">
-					    	<img src="img/11.jpg" alt="">
-					    </figure>									 					
-					    <div class="content" style="margin:10px;">
-					    	<p class="item_com">문의처 :
-063-442-0062
-
-주소 :
-군산시 궁포3로 13 (조촌동)</p>
-					    </div>
-					    <a href="tourF2.html" class="button is-priprimary">자세히 보기</a>
-  						</article>
-  							</div>
-
-  					</div>
-  			</div>
-  					<div class="buttons">
-  						<a href="/pro03/GetTourListCtrl.do" class="button is-info">전체 목록</a>
-  					</div>
-  		</div>
-  	</section>
-	  <footer class="footer">
-		<div class="content has-text-centered">
-			<img src="./img/ftlogo.gif" style="width:120px">
-			<br>
-		  <p>
-		   (우 54078) 전북 군산시 시청로 17 (조촌동,군산시청) 대표전화 (063)454-4000 팩스 (063) 454-3329<br>
-					  © Copyright(c) 2013 GUNSANCITY All right reserved.
-		  </p>
+    </div>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">공지사항 글쓰기</h1>
+      <form action="/pro03/AddNoticeCtrl.do" method="post">
+		<table class="table">
+		  <tbody>
+		    <tr>
+		      <th><label for="title">제목</label></th>
+		      <td><input type="text" id="title" name="title" placeholder="제목 입력" class="input"  required></td>
+		    </tr>
+		    <tr>
+		      <th><label for="content">내용</label></th>
+		      <td><textarea class="textarea" placeholder="내용 입력" id="content" name="content" cols="100" rows="10"></textarea></td>
+		    </tr>
+		   </tbody>
+		</table>
+	<div class="buttons">
+		<button type="submit" class="button is-primary is-light">등록</button>
+		<button type="reset" class="button is-success is-light">취소</button>
+		<a href="notice.html" class="button is-success is-light">목록</a>
 		</div>
-	  </footer>
-</body>
+	 </form>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="content has-text-centered">
+        <img src="./img/ftlogo.gif" style="width:120px">
+        <br>
+      <p>
+       (우 54078) 전북 군산시 시청로 17 (조촌동,군산시청) 대표전화 (063)454-4000 팩스 (063) 454-3329<br>
+                  © Copyright(c) 2013 GUNSANCITY All right reserved.
+      </p>
+    </div>
+  </footer>
+  </body>
 </html>
