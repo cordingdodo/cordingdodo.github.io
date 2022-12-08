@@ -1,28 +1,12 @@
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>장소 상세보기</title>
-    
-
-
-
-
-
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <style>
-
 body, html { font-family: 'Noto Sans KR', sans-serif; }
 .table { min-width:960px; }
 #logo2 { display:block; width:73px; height:67px; background-color:white; background-image:("/pro03/img/logo.gif");
@@ -62,23 +46,17 @@ max-height:40px; }
 	<script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U0301/cssjs/JSON-js/fc535e9cc8/json2.min.js"></script>
   </head>
   <body class="web guide" data-page_section="web" data-page_type="guide" data-title="Daum 지도 Web API 가이드">
-  
-
-
     <div id="nav-group">
         <div class="container"> 
               <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
                 <div class="navbar-brand">
                         <a href="index.html" target="_blank"><img src="./img/logo.gif" alt="logo" style="width:120px;height:auto;"></a>
-                  
-              
                   <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                   </a>
                 </div>
-              
                 <div id="navbarBasicExample" class="navbar-menu">
                   <div class="navbar-start" id="gnb">
                       <!-- ajax로 메뉴 로딩하여 추가하기 -->
@@ -138,7 +116,6 @@ max-height:40px; }
                           <a class="navbar-link">
                                 군산에 대해
                           </a>
-                      
                           <div class="navbar-dropdown single">
                             <a class="navbar-item">
                               About
@@ -156,10 +133,8 @@ max-height:40px; }
                           </div>
                     </div>
                   </div>
-                  
                   <div class="navbar-end" id="tnb">
                     <div class="navbar-item">
-                        
                 <div class="buttons">
                   <a href="join.html" class="button is-primary">
                     <strong>Sign up</strong>
@@ -168,8 +143,6 @@ max-height:40px; }
                     Log in
                   </a>
                    </div>
-                  
-                  
                 </div>
               </div>
                 </div>
@@ -219,20 +192,10 @@ max-height:40px; }
       </div>
 	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
 	  <ul style="float:right;">
-	    <li><a href="/pro03/">Home</a></li>
-	    <li><a href="/pro03/GetTourListCtrl.do">전체 장소</a></li>
-	    <li><a href="/pro03/GetTourCateListCtrl.do?cate=F">
- 			 
-			
-			
-			
-			
-			
-			
+	    <li><a href="index.html">Home</a></li>
+	    <li><a href="">전체 장소</a></li>
+	    <li><a href="tourF.html">
 			<span>음식</span>
-			
-			
-			
 	    </a></li>
 	    <li class="is-active"><a href="#" aria-current="page">매주육일</a></li>
 	  </ul>
@@ -242,17 +205,12 @@ max-height:40px; }
       <h1 class="title">매주육일 상세보기</h1>
       	<div id="con">
       		<table class="table">
-      			
       			<tr>
-				
 				<td>
-					<img src="/pro03/upload/11.jpg" class="lazy" onerror="this.style.display='none'" alt="배너" />
+					<img src="./img/11.jpg" class="lazy" onerror="this.style.display='none'" alt="배너" />
 					<!-- onerror="this.style.display='none'"  -->
-	      		</td>
-					
+	      		</td>	
 		    	</tr>
-		    	
-				
 		  </tbody>
 		</table>
       	</div>
@@ -265,17 +223,7 @@ max-height:40px; }
 		    <tr>
 		      <th>분류</th>
 		      <td>
-   				 
-				
-				
-				
-				
-				
-				
 				<span>음식</span>
-				
-				
-				
 		      </td>
 		    </tr>
 		    <tr>
@@ -362,11 +310,10 @@ max-height:40px; }
 		</div>
 		<div class="buttons">
 		  <a href="/pro03/GetTourListCtrl.do" class="button is-info">전체 목록</a>
-		  <a href="/pro03/GetTourCateListCtrl.do?cate=F" class="button is-info">카테고리 목록</a>
+		  <a href="tourF.html" class="button is-info">카테고리 목록</a>
 		  
 			  <a href="/pro03/DelTourCtrl.do?no=27" class="button is-danger">장소 삭제</a>
 			  <a href="/pro03/ModifyTourCtrl.do?no=27" class="button is-warning">장소 수정</a>
-		  
 		</div>
     </div>
   </section>
@@ -402,8 +349,6 @@ max-height:40px; }
 	  window.addEventListener("orientationChange", lazyload);
 	}); */
   </script>
-	
-  
 <footer class="footer">
   <div class="content has-text-centered">
     <p>

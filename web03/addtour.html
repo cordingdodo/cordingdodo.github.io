@@ -1,28 +1,12 @@
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>장소 등록</title>
-    
-
-
-
-
-
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <style>
-
 body, html { font-family: 'Noto Sans KR', sans-serif; }
 .table { min-width:960px; }
 #logo2 { display:block; width:73px; height:67px; background-color:white; background-image:("/pro03/img/logo.gif");
@@ -55,23 +39,17 @@ max-height:40px; }
 <script src="https://code.jquery.com/jquery-latest.js"></script>
   </head>
   <body>
-  
-
-
-	<div id="nav-group">
+  	<div id="nav-group">
 		<div class="container"> 
 			  <nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
 				<div class="navbar-brand">
-						<a href="index.html" target="_blank"><img src="./img/logo.gif" alt="logo" style="width:120px;height:auto;"></a>
-				  
-			  
+						<a href="index.html" target="_blank"><img src="./img/logo.gif" alt="logo" style="width:120px;height:auto;"></a>	  
 				  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 				  </a>
-				</div>
-			  
+				</div>			  
 				<div id="navbarBasicExample" class="navbar-menu">
 				  <div class="navbar-start" id="gnb">
 					  <!-- ajax로 메뉴 로딩하여 추가하기 -->
@@ -111,12 +89,6 @@ max-height:40px; }
 						  </a>
 						  <div class="navbar-dropdown cate" id="cate06"><a href="tourF1.html">째보식당</a><a href="tourF2.html">매주육일</a></div>
 					  </div>
-					  <div class="navbar-item has-dropdown is-hoverable">
-						  <a href="tourG.html" class="navbar-link cate">
-								쇼핑
-						  </a>
-					  <div class="navbar-dropdown cate" id="cate07"><a href="tourG.html">울외장아찌</a></div>
-					  </div>
 					  <div class="navbar-item has-dropdown is-hoverable single">
 						  <a class="navbar-link" href="support.html">
 								관광안내
@@ -130,8 +102,7 @@ max-height:40px; }
 					  <div class="navbar-item has-dropdown is-hoverable single">
 						  <a class="navbar-link">
 								군산에 대해
-						  </a>
-					  
+						  </a>					  
 						  <div class="navbar-dropdown single">
 							<a class="navbar-item">
 							  About
@@ -148,11 +119,9 @@ max-height:40px; }
 							</a>
 						  </div>
 					</div>
-				  </div>
-				  
+				  </div>				  
 				  <div class="navbar-end" id="tnb">
-					<div class="navbar-item">
-						
+					<div class="navbar-item">						
 				<div class="buttons">
 				  <a href="join.html" class="button is-primary">
 					<strong>Sign up</strong>
@@ -161,8 +130,6 @@ max-height:40px; }
 					Log in
 				  </a>
 				   </div>
-				  
-				  
 				</div>
 			  </div>
 				</div>
@@ -202,8 +169,7 @@ max-height:40px; }
 								  }
 							  }
 						  }
-					  });
-					  
+					  });	  
 				  }
 			  });
 		  });
@@ -212,12 +178,6 @@ max-height:40px; }
 	  </div>
 	<section class="section">
 	    <div class="columns is-full">
-			    
-
-
-
-
-
 <aside class="column is-2 has-background-primary-dark has-text-white" style="min-height:90vh" id="sidebar">
 	<div class="navbar-menu">
 		<div class="navbar">
@@ -241,7 +201,6 @@ max-height:40px; }
 						    <option value="D">축제</option>
 						    <option value="E">숙박</option>
 						    <option value="F">음식</option>
-						    <option value="G">쇼핑</option>
 						    <option value="H">기타</option>
 						  </select>
 						  <input type="hidden" id="tourno" name="tourno" value="">
@@ -260,7 +219,6 @@ max-height:40px; }
 					  </div>
 					  <p class="help is-success">장소명을 입력하세요</p>
 					</div>
-					
 					<div class="field">
 					  <label class="label">장소 주요설명</label>
 					  <div class="control has-icons-left has-icons-right">
@@ -268,7 +226,6 @@ max-height:40px; }
 					  </div>
 					  <p class="help is-success">장소의 주요설명을 넣어 주시기 바랍니다.</p>
 					</div>
-
 					<div class="field">
 					  <label class="label">장소 상세설명</label>
 					  <div class="control has-icons-left has-icons-right">
@@ -276,23 +233,20 @@ max-height:40px; }
 					  </div>
 					  <p class="help is-success">장소의 상세설명을 넣어 주시기 바랍니다.</p>
 					</div>
-					
 					<div class="field">
 					  	<label class="label">주소</label>
 					    <input type="text" name="address1" id="address1" class="input" style="margin-bottom:10px;" placeholder="기본 주소" required>
 					    <input type="text" name="address2" id="address2" class="input" style="margin-bottom:10px;" placeholder="상세 주소" required>
 					    <input type="text" name="postcode" id="postcode" class="input" style="margin-bottom:10px;" placeholder="우편 번호" required>
 					    <button id="post_btn" onclick="findAddr()" class="button is-info">우편번호 검색</button>
-					</div>		
-								
+					</div>			
 					<div class="field">
 					  <label class="label">이미지 추가</label>
 					  <div class="control">
 						<input type="hidden" name="pic_ck1" id="pic_ck1" value="no"/>
 						<button type="button" class="button is-link" onclick="imgUpload(1)">이미지 추가</button>
 					  </div>
-					</div>
-									
+					</div>		
 					<div class="field is-grouped">
 					  <div class="control">
 					    <button type="submit" class="button is-link">장소 등록</button>
@@ -310,7 +264,6 @@ max-height:40px; }
 						return;
 					}
 					var win1 = window.open("imgUpload.jsp?no="+no+"&tourno="+tourno,"win","width=850, height=400");
-					
 				}
 				function changeTourNo(){
 					var cate = document.frm1.cate.value; 
@@ -358,11 +311,9 @@ max-height:40px; }
 				}
 				</script>
 				<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-
 			</div>
 		</div>
   </section>
-  
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
