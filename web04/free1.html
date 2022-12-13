@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,8 +13,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
-<title>자유게시판</title>
- <!-- 헤드 부분 인클루드 -->
+<title>자유게시판 글 상세보기</title>
+<!-- 헤드 부분 인클루드 -->
+
+
+
+
+
 <!-- <script src="include/jquery.js"></script>
 <script src="include/foundation.js"></script>
 <link href="inculde/foundation.css" rel="stylesheet" /> -->
@@ -56,23 +69,27 @@ ul { list-style:none; }
 #footer .footer-nav-left .footer-copyright { line-height:80px; }
 #footer > article > div > ul > li.footer-nav-item { float:left; width:auto; padding:1.8rem; min-width:40px; }
 #footer > article > div.footer-nav-right > ul > li.footer-nav-item { width:25%; height:25%; }
+
 h2.h1 { font-size: 30px; padding-top: 20px; }
+
 </style>
 </head>
-<style>
-.container { clear: both; width: 1000px; margin: 0 auto;}
-#con1 { font-size: 30px; padding-top: 20px; }
-h2.con1 { font-size: 30px; padding-top: 20px; }
-</style>
 <body>
-	<header id ="header">
+	<header id="header">
 		<!-- 헤더 부분 인클루드 -->
+		
+
+
+
+
+
+
 <!-- 헤더 내용 기술 -->
 <nav class="top-bar">
    <div class="top-bar-left" id="gnb">
    	 <!-- <button class="menu-icon" type="button" data-toggle="responsive-menu"></button> -->
      <ul class="dropdown menu" data-dropdown-menu>
-       <li class="menu-text"><a href="index.html"><img src="https://www.theventi.co.kr/new/upload/frlogo/1848617922_lRpgiVKn_20220820101046.png" style="width:100px; float:left;"/></a></li>
+       <li class="menu-text"><a href="/"><img src="https://www.theventi.co.kr/new/upload/frlogo/1848617922_lRpgiVKn_20220820101046.png" style="width:100px; float:left;"/></a></li>
        <li><a href="/brand/brand.do">BRAND</a></li>
        <li><a href="/menu/menu.do">MENU</a></li>
        <li><a href="/store/store.do">STORE</a></li>
@@ -87,68 +104,97 @@ h2.con1 { font-size: 30px; padding-top: 20px; }
 			</ul>
     	</li>
      </ul>
-   </div>            
+   </div>
+            
      <div class="top-bar-right">
-       <ul class="menu">        
-          <li><a href="login.html">로그인</a></li>
-          <li><a href="join.html">회원가입</a></li>          
+       <ul class="menu">
+          <li><a href="/member/loginForm.do">로그인</a></li>
+          <li><a href="/member/agree.do">회원가입</a></li>
        </ul>
      </div>
   </nav>
     <!-- End Top Bar -->
+
 	</header>
 	<div class="content" id="content">
-		 <div class="row column text-center">
-			<h2 class="con1">자유 게시판</h2>
+			<div class="row column text-center">
+			<h2>자유 게시판</h2>
 			<hr>
 			<br>
-		<div class="container">
-		<table class="unstriped">
-		  <thead>
-		    <tr>
-		      <th width="50">NO</th>
-		      <th width="200">제목</th>
-		      <th width="150">작성자</th>
-		      <th width="150">작성일</th>
-		    </tr>
-		  </thead>
-		  <tbody>		    
-		    <tr>
-		    	<td>1</td>
-		    	<td><a href="free1.html">자유게시판 테스트3입니다</a></td>
-		    	<td>관리자</td>
-		    	<td>2022-12-05 10:13:15</td>
-		    </tr>		    
-		    <tr>
-		    	<td>2</td>
-		    	<td><a href="free1.html">자유게시판 테스트2입니다</a></td>
-		    	<td>관리자</td>
-		    	<td>2022-12-05 10:13:03</td>
-		    </tr>		    
-		    <tr>
-		    	<td>3</td>
-		    	<td><a href="free1.html">자유게시판 게시물1입니다</a></td>
-		    	<td>관리자</td>
-		    	<td>2022-12-05 10:12:56</td>
-		    </tr>
-		  </tbody>
-		</table>
-		<div class="btn groups">
-			<a class="button" href="/free/insert.do">글쓰기</a>
-		</div>
-		</div>
+			</div>			
+				<div class="container">
+				<table class="unstriped">
+					<tbody>
+					<tr>
+						<th style="background-color:#dcdcdc">글 번호</th>
+						<td>3</td>
+					</tr>
+					<tr>
+						<th style="background-color:#dcdcdc">제목</th>
+						<td>자유게시판 테스트3입니다</td>
+					</tr>					
+					<tr>
+						<th style="background-color:#dcdcdc">내용</th>
+						<td><p>테스트 글 내용입니다123</p>
+</td>
+					</tr>						
+					<tr>
+						<th style="background-color:#dcdcdc">작성자</th>
+						<td>관리자</td>
+					</tr>					
+					<tr>
+						<th style="background-color:#dcdcdc">작성일</th>
+						<td>2022-12-05 10:13:15</td>
+					</tr>						
+					<tr>
+						<th style="background-color:#dcdcdc">조회수</th>
+						<td>0</td>
+					</tr>	
+					</tbody>						
+				</table>
+				<div class="button_group">
+				<a class="button" href="/free/list.do">글 목록</a>				
+				<a class="button" href="/free/edit.do?bno=3">글 수정</a>
+				<a class="button" href="/free/delete.do=3">글 삭제</a>
+				</div>
 		</div>
 	</div>
-	<!-- Hotjar Tracking Code for my site -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3286238,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-</body>
-</html>
+    <div class="footer">
+        <section class="footer_line1">
+        <div id="ft_t1" style="width: 15%; height:150px; color:white; text-align: center; font-size:20px;  float: left;  ">
+         <img src="https://www.theventi.co.kr/new/upload/logo/32019960_2wtLrGNa_20220725081423.png">
+         <br>
+         </div>
+        <div id="ft_t2" style="width: 55%; height:150px; color:white; text-align: center; font-size:20px;  margin-left:70px;  float: left; ">
+      <strong>더벤티 소개　제휴/제안　고객상담　개인정보 처리방침　이용약관</strong>
+      </div>
+       <div id="ft_t3" style="width: 15%; height:150px; color:white; text-align: center; font-size:20px;  float: left; ">
+           <a href="https://www.youtube.com/channel/UCOOsAnrpEx4rWHEBg7xa8qQ" target="_blank"><img src="https://theventi.co.kr/new2022/assets/images/main/f_youtube.png" width="50" align="left"></a>
+             <a href="https://www.instagram.com/theventi_official/" target="_blank"><img src="https://theventi.co.kr/new2022/assets/images/main/f_insta.png" width="50" align="left"></a>
+            <a href="https://www.facebook.com/theventikr" target="_blank"><img src="https://theventi.co.kr/new2022/assets/images/main/f_facebook.png" width="50" align="left"></a>
+            <a href="http://blog.naver.com/theventilove" target="_blank"><img src="https://theventi.co.kr/new2022/assets/images/main/f_blog.png" width="50" align="left"></a>
+    </div>
+         </section>
+    <div class="footer2">
+              <section class="footer_line2">
+                <div id="ft_txt1" style="width: 10%; height:150px; color:white; text-align: center; font-size:23px;  float: left; ">
+      가맹문의 <br> 고객센터
+      </div>
+      <div id="ft_txt2" style="width: 10%; height:150px; float: left; font-size:25px;  color:#ff5b28";  >
+      1661-4553 <br> 1661-0513
+      </div>
+      <div id="ft_txt3" style="width: 12%; height:200px; float: left; font-size:18px;  margin-left:100px; color:white";  >
+      <strong>더벤티코리아 부산</strong><br><strong>더벤티코리아 서울</strong><br>(주)에스앤씨세인
+      </div>
+      <div id="ft_txt3" style="width: 39%; height:200px; float: left; font-size:18px; color:white";  >
+      부산광역시 해운대구 센텀서로 30, 2507호(KNN타워)<br>서울특별시 구로구 디지털로33길 27 408~414호<br>사업자번호 : 534-88-00122 대표이사 : 박수암 강삼남 최준경
+      </div>
+      <div id="ft_txt4" style="width: 50%; height:; float: left; font-size:18px; margin-left:-630px; color:white";  >
+      <br><br><br><br>Copyright © THEVENTI. All right Reserved. Created By <strong>dodo</strong>.
+      </div>
+          </section>
+    </div>
+  </body>
+  </html>
+  </body>
+  </html>
