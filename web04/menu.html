@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>공지사항 목록</title>
+	<title>MENU</title>
     <!-- 헤드 부분 인클루드 -->
 <!-- <script src="include/jquery.js"></script>
 <script src="include/foundation.js"></script>
@@ -20,6 +20,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.dropdownMenu.min.js"></script>
 <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script> -->
 <script src="https://code.jquery.com/jquery-latest.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="resources/css/normalize.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
@@ -59,11 +62,34 @@ h2.h1 { font-size: 30px; padding-top: 20px; }
 </style>
 </head>
 <style>
-.container { clear: both; width: 1000px; margin: 0 auto; }
-</style>
+.body { font-family: 'Noto Sans KR'; }
+  #all_cont {width:1200px; margin:10px auto;}
+.background-wrap { background-image: url('https://cdn.pixabay.com/photo/2013/11/05/23/55/coffee-206142_960_720.jpg'); width: 1200px; height: 500px; display: flex; justify-content: center; align-items: center; text-align : center; }
+.background-wrap2 { background-image: url('https://cdn.pixabay.com/photo/2018/06/06/10/13/coffee-beans-3457587_960_720.jpg'); width: 1200px; height: 500px; display: flex; justify-content: left; align-items: center; text-align : left; }
+.background-wrap3 { background-image: url('https://cdn.pixabay.com/photo/2016/02/21/07/55/coffee-1213249_960_720.jpg'); width: 1200px; height: 500px; display: flex; justify-content: left; align-items: center; text-align : left; }
+.content { display: flex; flex-direction: column;}
+.content span { color: white;}
+.sec2 { margin-top: 50px; text-align: center; margin-bottom:50px; }
+.sec2 > span { color: black; }
+.content span:nth-child(1) { font-size: 40px; font-weight: bold;}
+.content span:nth-child(2) { font-size: 20px;}
+.content div:nth-child(1) { font-size: 25px; color:#7B00A0; }
+.text-on-img { margin-top: 40px; }
+.con1 { color: white; font-size: 30px; margin-bottom:30px; }
+.con2 { color: white; font-size: 10px; }
+sec2_text3  { color: white; font-size: 15px; }
+.sec3 { margin-bottom:50px; }
+.sec4_text { margin-top: 30px; }
+.sec4_1 { float:left; margin-right:30px; }
+.sec4_2 { float:left }
+div#sec4_text1 { color: #7b00a0; font-weight: bold; font-size: 15px;}
+div#sec4_text2 { color: gray; font-size: 15px;}
+.main_image { position: relative; }
+.main_image_text { position: absolute; top: 10px; left: 10px; color: white; }
+  </style>
 <body>
-	<header id="header">
-		<!-- 헤더 부분 인클루드 -->
+<header id="header">
+	<!-- 헤더 부분 인클루드 -->
 <!-- 헤더 내용 기술 -->
 <nav class="top-bar">
    <div class="top-bar-left" id="gnb">
@@ -84,129 +110,47 @@ h2.h1 { font-size: 30px; padding-top: 20px; }
 			</ul>
     	</li>
      </ul>
-   </div>
+   </div>  
      <div class="top-bar-right">
-       <ul class="menu">          
-          <li><a href="/member/logout.do">로그아웃</a></li>
-          <li><a href="/member/read.do">회원정보</a></li>
-          <li><a href="#">관리자 페이지</a></li>
+       <ul class="menu">
+          <li><a href="login.html">로그인</a></li>
+          <li><a href="join.html">회원가입</a></li>
        </ul>
      </div>
   </nav>
     <!-- End Top Bar -->
-    </header>
-	<div class="content" id="content">
-	    <div class="row column text-center">
-	      <h2 class="h1">공지사항 목록</h2>
-	      <hr>
-	      <div class="container">
-		      <table>
-		      	<thead>
-		      		<tr>
-		      			<th width="80">No</th>
-		      			<th width="500">Title</th>
-		      			<th width="200">RegDate</th>
-		      			<th width="100">Visited</th>
-		      		</tr>
-		      	</thead>
-		      	<tbody>
-		      	
-		      		<tr>
-		      			<td>1</td>
-		      			<td><a href="notice2.html">테스트글 7입니다</a></td>
-		      			<td>
-
-	      					2022-11-28 16:03:56
-		      			</td>
-		      			<td>0</td>
-		      		</tr>
-		      	
-		      		<tr>
-		      			<td>2</td>
-		      			<td><a href="notice2.html">테스트글 8입니다</a></td>
-		      			<td>
-
-	      					2022-11-28 16:03:56
-		      			</td>
-		      			<td>0</td>
-		      		</tr>
-		      	
-		      		<tr>
-		      			<td>3</td>
-		      			<td><a href="notice2.html">테스트글 9입니다</a></td>
-		      			<td>
-
-	      					2022-11-28 16:03:56
-		      			</td>
-		      			<td>0</td>
-		      		</tr>
-		      	
-		      		<tr>
-		      			<td>4</td>
-		      			<td><a href="notice2.html">테스트글 10입니다</a></td>
-		      			<td>
-
-	      					2022-11-28 16:03:56
-		      			</td>
-		      			<td>0</td>
-		      		</tr>
-		      	
-		      		<tr>
-		      			<td>5</td>
-		      			<td><a href="notice2.html">테스트글 11입니다</a></td>
-		      			<td>
-
-	      					2022-11-28 16:03:56
-		      			</td>
-		      			<td>0</td>
-		      		</tr>
-		      	
-		      		<tr>
-		      			<td>6</td>
-		      			<td><a href="notice2.html">테스트글 5입니다</a></td>
-		      			<td>
-
-	      					2022-11-28 16:03:36
-		      			</td>
-		      			<td>0</td>
-		      		</tr>
-		      	
-		      		<tr>
-		      			<td>7</td>
-		      			<td><a href="notice2.html">테스트글 4입니다</a></td>
-		      			<td>
-
-	      					2022-11-28 16:03:29
-		      			</td>
-		      			<td>0</td>
-		      		</tr>
-		      	
-		      		<tr>
-		      			<td>8</td>
-		      			<td><a href="notice2.html">테스트글 3입니다</a></td>
-		      			<td>
-
-	      					2022-11-28 16:03:27
-		      			</td>
-		      			<td>0</td>
-		      		</tr>
-		      	
-		      		<tr>
-		      			<td>9</td>
-		      			<td><a href="notice2.html">테스트글 2입니다</a></td>
-		      			<td>
-
-	      					2022-11-28 16:03:23
-		      			</td>
-		      			<td>0</td>
-		      		</tr>
-		      	</tbody>
-		      </table>   
-		      	<div class="button-group">
-				  <a class="button" href="/board/insert.do">글쓰기</a>
-				</div>
-	      </div>
-	    </div>
+</header>
+<div class="content" id="all_cont">
+  <div class="text-on-img">
+  <div class="background-wrap">
+    <div class="content">
+      <span><Strong>MENU</Strong></span>
+      <span>좋은 커피와 맛있는 음료를 합리적인 가격에 제공해드리는 우리는 "더벤티"입니다</span>
+    </div>
+  </div>
+</div>
+<div class="sec2">
+  <div>더벤티 커피이야기</div>
+  <div class="text-on-img">
+  <div class="background-wrap2">
+    <div class="con1" style="margin-left: 20px;">
+      <span>01<br>취향에 맞는<br>원두 선택으로,<br></span>
+            <span>더 다양하게, 더 맛있게, 더 벤티하게</span></div>
+     <img src="https://theventi.co.kr/new2022/images/menu/intro_section1_img_m.png" style="margin-left:150px; width: 700px;" >
+    </div>
+  </div>
+<div class="sec3">
+  <div class="text-on-img">
+  <div class="background-wrap3">
+    <div class="con1" style="margin-left: 20px;">
+      <span>02<br>원두 특성을 살린<br>커스텀 로스팅 기법으로,<br></span>
+            <span>더 다양하게, 더 맛있게, 더 벤티하게</span></div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+	<!-- 푸터 부분 인클루드 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -262,6 +206,5 @@ section.footer_line1 { padding-top: 50px; }
   </div>
 </body>
 </html>
-	</div>
 </body>
 </html>
