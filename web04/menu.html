@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="resources/css/normalize.css" />
+<link rel="stylesheet" href="resources/css/normalize.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
@@ -36,8 +36,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
 <script>
   $(document).ready(function(){
-	  $(document).foundation();
-  });
+	  $(document).foundation();});
 </script>
 <style>
 body { font-family: 'Noto Sans KR'; }
@@ -90,6 +89,17 @@ div#sec4_text1 { color: #7b00a0; font-weight: bold; font-size: 15px;}
 div#sec4_text2 { color: gray; font-size: 15px;}
 .main_image { position: relative; }
 .main_image_text { position: absolute; top: 10px; left: 10px; color: white; }
+#ft_t1 {width: 15%; height:150px; color:white; text-align: center; font-size:20px;  float: left;}
+#ft_txt2 {width: 10%; height:150px; float: left; font-size:25px;  color : #ff5b28}
+#ft_t2 {width: 55%; height:150px; color:white; text-align: center; font-size:20px;  margin-left:70px;  float: left;}
+#ft_txt1 { width: 10%; height:150px; color:white; text-align: center; font-size:23px;  float: left;}
+#ft_txt3 {width: 12%; height:200px; float: left; font-size:18px;  margin-left:100px; color:white; }
+#ft_txt3_1 {width: 39%; height:200px; float: left; font-size:18px; color:white; }
+#ft_txt4 {width: 50%; float: left; font-size:18px; margin-left:-630px; color:white;}
+.background-wrap {background-size: cover;}
+.background-wrap2 {background-size: cover; }
+.background-wrap3 {background-size: cover; }
+.footer_line1 {padding-top: 50px;}
 </style>
 </head>
 <body>
@@ -100,7 +110,7 @@ div#sec4_text2 { color: gray; font-size: 15px;}
    <div class="top-bar-left" id="gnb">
    	 <!-- <button class="menu-icon" type="button" data-toggle="responsive-menu"></button> -->
      <ul class="dropdown menu" data-dropdown-menu>
-       <li class="menu-text"><a href="index.html"><img src="https://www.theventi.co.kr/new/upload/frlogo/1848617922_lRpgiVKn_20220820101046.png" style="width:100px; float:left;" alt="logo"></a></li>
+       <li class="menu-text"><a href="index.html"><img src="https://www.theventi.co.kr/new/upload/frlogo/1848617922_lRpgiVKn_20220820101046.png"  style="width:100px; float:left;" alt="logo"></a></li>
        <li><a href="brand.html">BRAND</a></li>
        <li><a href="menu.html">MENU</a></li>
        <li><a href="store.html">STORE</a></li>
@@ -141,7 +151,7 @@ div#sec4_text2 { color: gray; font-size: 15px;}
     <div class="con1" style="margin-left: 20px;">
       <span>01<br>취향에 맞는<br>원두 선택으로,<br></span>
             <span>더 다양하게, 더 맛있게, 더 벤티하게</span></div>
-     <img src="https://theventi.co.kr/new2022/images/menu/intro_section1_img_m.png" style="margin-left:150px; width: 700px;" >
+     <img src="https://theventi.co.kr/new2022/images/menu/intro_section1_img_m.png" alt ="1" style="margin-left:150px; width: 700px;" >
     </div>
   </div>
 <div class="sec3">
@@ -156,52 +166,42 @@ div#sec4_text2 { color: gray; font-size: 15px;}
   </div>
 </div>
 	<!-- 푸터 부분 인클루드 -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>footer</title>
-</head>
-<body>
   <div class="footer">
-  	<section class="footer_line1">
-  	<div id="ft_t1" style="width: 15%; height:150px; color:white; text-align: center; font-size:20px;  float: left;  ">
-  	 <img src="https://www.theventi.co.kr/new/upload/logo/32019960_2wtLrGNa_20220725081423.png">
+  	<div class="footer_line1">
+  	<div id="ft_t1">
+  	 <img src="https://www.theventi.co.kr/new/upload/logo/32019960_2wtLrGNa_20220725081423.png" alt="2">
   	 <br>
   	 </div>
-  	<div id="ft_t2" style="width: 55%; height:150px; color:white; text-align: center; font-size:20px;  margin-left:70px;  float: left; ">
+  	<div id="ft_t2">
 	<strong>더벤티 소개　제휴/제안　고객상담　개인정보 처리방침　이용약관</strong>
 	</div>
 	 <div id="ft_t3" style="width: 15%; height:150px; color:white; text-align: center; font-size:20px;  float: left; ">
-	 	<a href="https://www.youtube.com/channel/UCOOsAnrpEx4rWHEBg7xa8qQ" target="_blank"><img src="https://theventi.co.kr/new2022/assets/images/main/f_youtube.png" width="50" logo="유튭"></a>
-   		<a href="https://www.instagram.com/theventi_official/" target="_blank"><img src="https://theventi.co.kr/new2022/assets/images/main/f_insta.png" width="50" logo="인스타"></a>
+	 	<a href="https://www.youtube.com/channel/UCOOsAnrpEx4rWHEBg7xa8qQ" target="_blank"><img src="https://theventi.co.kr/new2022/assets/images/main/f_youtube.png" width="50" alt="유튭"></a>
+   		<a href="https://www.instagram.com/theventi_official/" target="_blank"><img src="https://theventi.co.kr/new2022/assets/images/main/f_insta.png" width="50" alt="인스타"></a>
   		<a href="https://www.facebook.com/theventikr" target="_blank"><img src="https://theventi.co.kr/new2022/assets/images/main/f_facebook.png" width="50" alt="페북"></a>
   		<a href="http://blog.naver.com/theventilove" target="_blank"><img src="https://theventi.co.kr/new2022/assets/images/main/f_blog.png" width="50" alt="블로그"></a>
   </div>
-   	</section>
+   	</div>
   <div class="footer2">
-  	  	<section class="footer_line2">
-  	  	  <div id="ft_txt1" style="width: 10%; height:150px; color:white; text-align: center; font-size:23px;  float: left; ">
+  	  	<div class="footer_line2">
+  	  	  <div id="ft_txt1">
 	가맹문의 <br> 고객센터
 	</div>
-	<div id="ft_txt2" style="width: 10%; height:150px; float: left; font-size:25px;  color:#ff5b28";  >
+	<div id="ft_txt2">
 	1661-4553 <br> 1661-0513
 	</div>
-	<div id="ft_txt3" style="width: 12%; height:200px; float: left; font-size:18px;  margin-left:100px; color:white";  >
+	<div id="ft_txt3">
 	<strong>더벤티코리아 부산</strong><br><strong>더벤티코리아 서울</strong><br>(주)에스앤씨세인
 	</div>
-	<div id="ft_txt3" style="width: 39%; height:200px; float: left; font-size:18px; color:white";  >
+	<div id="ft_txt3_1">
 	부산광역시 해운대구 센텀서로 30, 2507호(KNN타워)<br>서울특별시 구로구 디지털로33길 27 408~414호<br>사업자번호 : 534-88-00122 대표이사 : 박수암 강삼남 최준경
 	</div>
-	<div id="ft_txt4" style="width: 50%; height:; float: left; font-size:18px; margin-left:-630px; color:white";  >
+	<div id="ft_txt4">
 	<br><br><br><br>Copyright © THEVENTI. All right Reserved. Created By <strong>dodo</strong>.
 	</div>
-		</section>
+      </div>
   </div>
-</body>
-</html>
+  </div>
 <!-- Hotjar Tracking Code for my site -->
 <script>
   (function(h,o,t,j,a,r){
