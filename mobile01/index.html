@@ -1,50 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>나이키 코리아</title>
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <style>
-    .page_tit { font-size:5vw; clear:both; padding-bottom: 2rem; }
-    .ui-header .ui-title { text-align:right; }
-    .img1{width: 50vw;}
-    p {font-size: 1.5vw;}
-    .kkt-video-player { clear:both; }
-    .kkt-video-player::after { content:""; display:block; clear:both;}
-    .vdo1-dimensions { width:600px; margin: 0; padding: 0; min-width:600px;  min-height:452px; }
-    .vdo1-dimensions::after { content:""; clear:both; display:block; }
-    .video-js .vjs-tech { display:block; width:auto; min-width:600px; min-height:452px;}
-    /* 모바일 */
-    @media screen and (max-width:767px) {
-      body, html { margin: 0; padding: 0; }
-      .kkt-video-player { min-width:320px; margin: 0; padding: 0; width:100vw; }
-      .vdo1-dimensions { min-width:320px; width:100vw; }
-      .video-js .vjs-tech { min-width:320px; width:auto; }
-    }
-    /* 태블릿 */
-    @media screen and (min-width:768px) and (max-width:959px){
-      body, html { margin: 0; padding: 0; }
-      .kkt-video-player { min-width:768px; margin: 0; padding: 0; width:100vw; }
-      .vdo1-dimensions { min-width:768px; width:100vw; }
-      .video-js .vjs-tech { min-width:768px; width:auto; }
-    }
-    /* 데스크탑 */
-    @media screen and (min-width:960px) {
-      body, html { margin: 0; padding: 0; }
-      .kkt-video-player { min-width:960px; margin: 0; padding: 0; max-width:960px;  }
-      .vdo1-dimensions { min-width:960px; max-width:960px;  }
-      .video-js .vjs-tech { min-width:960px; max-width:960px; width:auto; }
-    }
+    <head>
+        <!-- 뷰 포트 및 콘텐츠 타입 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta http-equiv="refresh" content="600">
+        <meta http-equiv="Page-Enter" content="revealtrans(Duration=1,Transition=12)">
+        <!-- 문서 정보 : 메타포(metaphor) -->
+        <title>나이키 코리아</title>
+        <meta name="application-name" content="나이키 코리아">
+        <meta name="subject" content="나이키 코리아">
+        <meta name="keywords" content="가능성을 펼쳐보세요">
+        <meta name="description" content="NIKE - 너라는 위대함을 믿어.">
+        <meta name="url" content="https://cordingdodo.github.io/mobile02/">
+        <meta name="author" content="kimdoyeon">
+        <meta name="email" content="cordingdodo@gmail.com">
+        <meta name="robots" content="index, flow">
+    
+        <!-- 오픈 그래프 -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://cordingdodo.github.io/mobile02/">
+        <meta property="og:title" content="나이키 코리아">
+        <meta property="og:site_name" content="나이키 코리아">
+        <meta property="og:image" content="./assets/icon/favicon.png">
+        <meta property="og:image:width" content="1000">
+        <meta property="og:image:height" content="400">
+        <meta property="og:locale" content="ko_KR">
+        <meta name="twitter:card" content="video">
+        <meta name="twitter:title" content="나이키 코리아">
+        <meta name="twitter:description" content="가능성을 펼쳐보세요">
+        <meta name="twitter:image" content="./assets/icon/favicon.png">
+    
+        <!-- 해상도 및 브라우저와 기기별 앱 아이콘 및 바로가기 아이콘 설정 -->
+        <link rel="shortcut icon" href="./assets/icon/favicon.png">
+        <!-- 애플사의 기기 아이콘 설정 -->
+        <meta name="apple-mobile-web-app-title" content="나이키 코리아">
+        <link rel="apple-touch-icon-precomposed" href="/favicon_logo/apple-icon-152x152.png">
+        <!-- iPhone 저사양 및 iPod -->
+        <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-57x57.png" sizes="57x57">
+        <!-- iPad -->
+        <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-76x76.png" sizes="76x76">
+        <!-- iPhone Retina -->
+        <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-120x120.png" sizes="120x120">
+        <!-- iPad Retina -->
+        <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-152x152.png" sizes="152x152">
+        <!-- iPhone 6 이상 -->
+        <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-180x180.png" sizes="180x180">
+        <!-- 애플사 기기의 앱에 시작화면 -->
+        <link rel="apple-touch-startup-image" href="/img/logo.png">
+        <!-- 애플사 기기의 URL바나 UI바 보이게 -->
+        <meta name="apple-mobile-web-app-capable" href="yes">
+        <!-- 상태바의 색상 설정 -->
+        <meta name="apple-mobile-web-app-status-bar-style" href="black-translucent">
+        <!-- MS 사의 기기에 대한 아이콘 설정-->
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="favicon-144.png">
+        <!-- 기기의 지원 해상도별 아이콘 설정 -->
+        <link rel="icon" href="/favicon_logo/fav_logo.ico">
+        <link rel="icon" href="/favicon_logo/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" href="/favicon_logo/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" href="/favicon_logo/favicon-48x48.png" sizes="48x48">
+        <link rel="icon" href="/favicon_logo/favicon-64x64.png" sizes="64x64">
+        <link rel="icon" href="/favicon_logo/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" href="/favicon_logo/favicon-128x128.png" sizes="128x128">
+    
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link href="media.css" rel="stylesheet">
     </style>
 </head>
 <body class="ui-mobile-viewport ui-overlay-b">
 <div id="page0" data-role="page" class="ui-page ui-page-theme-a ui-page-active">
     <header class="ui-header" data-role="header" data-theme="b">
-        <h2 class="ui-title">header</h2>
+        <h2 class="ui-title">나이키 코리아</h2>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -67,7 +100,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -99,9 +132,9 @@
             </li>
             <li class="ui-li-has-thumb ui-last-child">
                 <a href="#page23" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-                    <img src="./assets/images/3.PNG">
-                    <h2>나이키 에어맥스 97</h2>
-                    <p>153,300</p>
+                    <img src="./assets/images/1.PNG">
+                    <h2>나이키 에어 포스 1 '07</h2>
+                    <p>139,000 </p>
                 </a>
             </li>
         </ul>
@@ -113,7 +146,7 @@
 <div id="page1" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page0" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -136,7 +169,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -164,7 +197,7 @@
 <div id="page11" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page1" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -187,7 +220,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -214,7 +247,7 @@
 <div id="page12" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page1" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -237,7 +270,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -255,13 +288,12 @@
         <strong>당신의 가능성을 펼쳐보세요</strong>
         <p>당신의 움직임을 위한 최고의 선물, 소중한 사람에게 선물 그 이상의 가치를 전하며 새로운 가능성을 펼쳐보세요</p>
         <div class="player">
-            <video src="./assets/vdo/vdo.mp4" class="vdo" id="vdo1"></video>
+            <video src="./assets/vdo/vdo3.mp4" class="vdo" id="vdo1"></video>
             <div class="btn_lst" id="btn_lst">
                 <ul>
                     <li><span data-val="./assets/vdo/vdo1.mp4">리정과 함께하는 나이키 #NTC댄스챌린지</span></li>                
                     <li><span data-val="./assets/vdo/vdo3.mp4">Nike FC Presents the Footballverse</span></li>                    
-                    <li><span data-val="./assets/vdo/vdo2.mp4">Join Forces 나이키 에어포스1 40주년</span></li>
-                    <li><span data-val="./assets/vdo/vdo.mp4">리정과 함께하는 나이키 #NTC댄스챌린지</span></li>                
+                    <li><span data-val="./assets/vdo/vdo2.mp4">Join Forces 나이키 에어포스1 40주년</span></li>                                    
                 </ul>
             </div>
         </div>
@@ -288,7 +320,7 @@
 <div id="page2" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page0" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page2</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -311,7 +343,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -326,7 +358,7 @@
     </header>
     <div class="ui-content" data-role="content">
         <h1 class="ui-title">PRODUCT</h1>
-        <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview" data-filter="true" data-filter-placeholder="Search Station...">
+        <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview" data-filter="true" data-filter-placeholder="Login Station...">
             <li class="ui-first-child">
                 <a href="#page21" class="ui-btn ui-btn-icon-right ui-icon-carat-r">TOP</a>
             </li>
@@ -345,7 +377,7 @@
 <div id="page21" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page2" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -368,7 +400,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -408,7 +440,7 @@
 <div id="page22" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page2" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -431,7 +463,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -471,7 +503,7 @@
 <div id="page23" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page2" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아3</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -494,7 +526,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -534,7 +566,7 @@
 <div id="page3" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page0" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아3</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -557,7 +589,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -572,7 +604,7 @@
     </header>
     <div class="ui-content" data-role="content">
         <h2 class="ui-title">공지사항 목록</h2>
-        <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview" data-filter="true" data-filter-placeholder="Search Notice...">
+        <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview" data-filter="true" data-filter-placeholder="Login Notice...">
             <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-li-has-count ui-first-child">2022-12-26 월
                 <span class="ui-li-count ui-body-inherit">2</span>
             </li>
@@ -612,7 +644,7 @@
 <div id="page31" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page3" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아3</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -635,7 +667,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -676,7 +708,7 @@
 <div id="page4" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page0" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page4</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아4</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -699,7 +731,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -714,8 +746,25 @@
     </header>
     <div data-role="content" role="sub" class="ui-content">
         <div data-role="content" class="ui-content">
-            <h1 class="page_title">검색하기</h1>
-            <input type="search" name="search" id="search-basic" placeholder="찾으시는 상품명을 입력하세요">
+            <h1 class="page_title">로그인</h1>
+            <div data-role="content" role="sub" class="ui-content">
+                <a href="#page4" data-role="button" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-right" role="button"></a>
+                <div data-role="container">
+                    <form>
+                        <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                            <li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">
+                                <input type="text" name="id" id="id" value="" data-clear-btn="true" placeholder="ID 입력">
+                            </li>
+                            <li class="ui-field-contain ui-li-static ui-body-inherit">
+                                <input type="password" name="pw" id="pw" value="" data-clear-btn="true" placeholder="PW 입력">
+                            </li>
+                            <div class="ui-btn-group">
+                                <button type="submit" class="ui-btn ui-btn-inline">로그인</button>
+                                <a href="#page" class="ui-btn ui-btn-inline">회원가입</button>
+                            </div>
+                        </ul>
+                    </form>
+             </div>
         </div>
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
@@ -725,7 +774,7 @@
 <div id="page5" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page0" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page5</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아5</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -748,7 +797,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
@@ -803,7 +852,7 @@
 <div id="page51" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page5" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -826,7 +875,7 @@
                 </li>
                 <li class="ui-block-d">
                     <a href="#page4" data-icon="video" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                        <span class="ui-btn-text">Search</span>
+                        <span class="ui-btn-text">Login</span>
                         <span class="ui-icon ui-icon-camera ui-icon-shadow"></span>
                     </a>
                 </li>
