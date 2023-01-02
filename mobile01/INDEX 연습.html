@@ -1,24 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>베스트펜</title>
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- 뷰 포트 및 콘텐츠 타입 -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="refresh" content="600">
+  <meta http-equiv="Page-Enter" content="revealtrans(Duration=1,Transition=12)">
+  <!-- 문서 정보 : 메타포(metaphor) -->
+  <title>나이키 코리아</title>
+  <meta name="application-name" content="나이키 코리아">
+  <meta name="subject" content="나이키 코리아">
+  <meta name="keywords" content="가능성을 펼쳐보세요">
+  <meta name="description" content="NIKE - 너라는 위대함을 믿어.">
+  <meta name="url" content="https://cordingdodo.github.io/mobile02/">
+  <meta name="author" content="kimdoyeon">
+  <meta name="email" content="cordingdodo@gmail.com">
+  <meta name="robots" content="index, flow">
+
+  <!-- 오픈 그래프 -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cordingdodo.github.io/mobile02/">
+  <meta property="og:title" content="나이키 코리아">
+  <meta property="og:site_name" content="나이키 코리아">
+  <meta property="og:image" content="./assets/icon/favicon.png">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="400">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="twitter:card" content="video">
+  <meta name="twitter:title" content="나이키 코리아">
+  <meta name="twitter:description" content="가능성을 펼쳐보세요">
+  <meta name="twitter:image" content="./assets/icon/favicon.png">
+
+  <!-- 해상도 및 브라우저와 기기별 앱 아이콘 및 바로가기 아이콘 설정 -->
+  <link rel="shortcut icon" href="./assets/icon/favicon.png">
+  <!-- 애플사의 기기 아이콘 설정 -->
+  <meta name="apple-mobile-web-app-title" content="나이키 코리아">
+  <link rel="apple-touch-icon-precomposed" href="/favicon_logo/apple-icon-152x152.png">
+  <!-- iPhone 저사양 및 iPod -->
+  <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-57x57.png" sizes="57x57">
+  <!-- iPad -->
+  <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-76x76.png" sizes="76x76">
+  <!-- iPhone Retina -->
+  <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-120x120.png" sizes="120x120">
+  <!-- iPad Retina -->
+  <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-152x152.png" sizes="152x152">
+  <!-- iPhone 6 이상 -->
+  <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-180x180.png" sizes="180x180">
+  <!-- 애플사 기기의 앱에 시작화면 -->
+  <link rel="apple-touch-startup-image" href="/img/logo.png">
+  <!-- 애플사 기기의 URL바나 UI바 보이게 -->
+  <meta name="apple-mobile-web-app-capable" href="yes">
+  <!-- 상태바의 색상 설정 -->
+  <meta name="apple-mobile-web-app-status-bar-style" href="black-translucent">
+  <!-- MS 사의 기기에 대한 아이콘 설정-->
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="favicon-144.png">
+  <!-- 기기의 지원 해상도별 아이콘 설정 -->
+  <link rel="icon" href="/favicon_logo/fav_logo.ico">
+  <link rel="icon" href="/favicon_logo/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" href="/favicon_logo/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="/favicon_logo/favicon-48x48.png" sizes="48x48">
+  <link rel="icon" href="/favicon_logo/favicon-64x64.png" sizes="64x64">
+  <link rel="icon" href="/favicon_logo/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" href="/favicon_logo/favicon-128x128.png" sizes="128x128">
+
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link href="media.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
     <style>
     .page_tit { font-size:5vw; clear:both; padding-bottom: 2rem; }
     .ui-header .ui-title { text-align:right; }
     .img1{width: 50vw;}
     p {font-size: 1.5vw;}
+    .ui-title_1 {height: 55px;}
+    .kkt-video-player { clear:both; }
+    .kkt-video-player::after { content:""; display:block; clear:both;}
+    .vdo1-dimensions { width:600px; margin: 0; padding: 0; min-width:600px;  min-height:452px; }
+    .vdo1-dimensions::after { content:""; clear:both; display:block; }
+    .video-js .vjs-tech { display:block; width:auto; min-width:600px; min-height:452px;}
+    /* 모바일 */
+    @media screen and (max-width:767px) {
+      body, html { margin: 0; padding: 0; }
+      .kkt-video-player { min-width:320px; margin: 0; padding: 0; width:100vw; }
+      .vdo1-dimensions { min-width:320px; width:100vw; }
+      .video-js .vjs-tech { min-width:320px; width:auto; }
+    }
+    /* 태블릿 */
+    @media screen and (min-width:768px) and (max-width:959px){
+      body, html { margin: 0; padding: 0; }
+      .kkt-video-player { min-width:768px; margin: 0; padding: 0; width:100vw; }
+      .vdo1-dimensions { min-width:768px; width:100vw; }
+      .video-js .vjs-tech { min-width:768px; width:auto; }
+    }
+    /* 데스크탑 */
+    @media screen and (min-width:960px) {
+      body, html { margin: 0; padding: 0; }
+      .kkt-video-player { min-width:960px; margin: 0; padding: 0; max-width:960px;  }
+      .vdo1-dimensions { min-width:960px; max-width:960px;  }
+      .video-js .vjs-tech { min-width:960px; max-width:960px; width:auto; }
+    }
+    </style>
     </style>
 </head>
 <body class="ui-mobile-viewport ui-overlay-b">
 <div id="page0" data-role="page" class="ui-page ui-page-theme-a ui-page-active">
     <header class="ui-header" data-role="header" data-theme="b">
-        <h2 class="ui-title">여기는 헤더</h2>
+        <h2 class="ui-title">나이키 코리아</h2>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -87,7 +182,7 @@
 <div id="page1" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page0" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -124,7 +219,7 @@
         </nav>
     </header>
     <div class="ui-content" data-role="content">
-        <h1 class="ui-title">COMPANY</h1>
+        <h1 class="ui-title_1">COMPANY</h1>
         <ul class="listview" data-role="listview">
             <li class="ui-li-static ui-body-inherit ui-first-child"><a href="#page11" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">매장소개</a></li>
             </li>
@@ -132,13 +227,13 @@
         </ul>
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 <div id="page11" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page1" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -176,19 +271,19 @@
     </header>
     <div class="ui-content" data-role="content">
         <h1 class="ui-title">나이키 코리아 명동</h1>
-        <img src="../icons-png/shop.jpg" alt="이미지" style="width:90vw;">
+        <img src="./assets/images/shop.jpg" alt="이미지" style="width:90vw;">
         <h3> 전화 : 02-772-3689</h3>
         <h3>서울 중구 남대문로 73 AVENUEL 6층</h3>
             <h3>연중무휴 10:30 - 20:00</h3>
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 <div id="page12" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page1" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -225,24 +320,40 @@
         </nav>
     </header>
     <div class="ui-content" data-role="content">
-        <h1 class="ui-title">여기엔 뭘 넣을까요</h1>
-        <strong>나이키 에어 포스 1 '07</strong>
-        <p>만년필을 제대로 필기하려면 필기 각도와 만년필 펜촉 방향에 대해서 올바른 사용 방식의 이해가 필요합니다.</p>
-        <p>1. 필기 각도는 만년필을 잡았을 때 종이를 기준으로 30~45도 기울 어진 상태로 잡아서 사용하는 것이 좋습니다.</p>
-        <img src="./use1.jpg" alt="이미지" style="width:90vw;">
-        <p>2. 만년필 펜촉 방향은 펜촉 상단이 하늘을 본 상태로 필기 방향 안쪽 으로 살짝 기울여 사용하는 것이 좋습니다.</p>
-        <img src="./use2.jpg" alt="이미지" style="width:90vw;">
-        <p>3. 만년필을 강하게 잡고 사용할 경우, 펜촉에 무리가 가 고장이 날 수 있습니다. 만년필을 잡을 때 손에 힘을 빼고 필기를 해주세요.</p>
-        <img src="./use3.jpg" alt="이미지" style="width:90vw;">
+        <h1 class="ui-title">나이키 코리아</h1>
+        <strong>당신의 가능성을 펼쳐보세요</strong>
+        <p>당신의 움직임을 위한 최고의 선물, 소중한 사람에게 선물 그 이상의 가치를 전하며 새로운 가능성을 펼쳐보세요</p>
+        <div class="player">
+            <div class="kkt-video-player">
+               <video id="vdo1" class="video-js" controls preload="auto" data-setup="{}">
+                   <source src="./assets/vdo/vdo1.mp4" type="video/mp4" />
+               </video>
+            </div>
+            <div class="btn_lst" id="btn_lst">
+               <ul>
+                <li><span data-val="./assets/vdo/vdo1.mp4">리정과 함께하는 나이키 #NTC댄스챌린지</span></li>                
+                <li><span data-val="./assets/vdo/vdo3.mp4">Nike FC Presents the Footballverse</span></li>                    
+                <li><span data-val="./assets/vdo/vdo2.mp4">Join Forces 나이키 에어포스1 40주년</span></li>  
+               </ul>
+            </div>
+          </div>
+          <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+         <script>
+         $(document).ready(function(){
+           $("#btn_lst li span").click(function(){
+               $("#vdo1_html5_api").attr("src", $(this).attr("data-val"));
+           });
+         });  
+         </script>
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 <div id="page2" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page0" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page2</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아2</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -293,13 +404,13 @@
       </ul>
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 <div id="page21" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page2" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아3</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -338,7 +449,7 @@
     <div data-role="content" role="sub" class="ui-content">
         <table data-role="table" id="my-table" data-mode="reflow">
             <h3>나이키 솔로 스우시</h3>
-            <img src="../icons-png/t1.PNG" alt="top" class="img1">
+            <img src="./assets/images/t1.PNG" alt="top" class="img1">
             <thead>
               <tr>
                 <th>가격</th>
@@ -356,13 +467,13 @@
         </table> 
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 <div id="page22" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page2" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아3</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -401,7 +512,7 @@
     <div data-role="content" role="sub" class="ui-content">
         <table data-role="table" id="my-table" data-mode="reflow">
             <h3>나이키 스포츠웨어 클럽 플리스</h3>
-            <img src="../icons-png/p1.PNG" alt="pants" class="img1">
+            <img src="./assets/images/p1.PNG" alt="pants" class="img1">
             <thead>
               <tr>
                 <th>가격</th>
@@ -419,13 +530,13 @@
         </table> 
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 <div id="page23" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page2" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아3</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -464,7 +575,7 @@
     <div data-role="content" role="sub" class="ui-content">
         <table data-role="table" id="my-table" data-mode="reflow">
             <h3>나이키 에어 포스 1 '07</h3>
-            <img src="../icons-png/1.PNG" alt="이미지" class="img1">
+            <img src="./assets/images/1.PNG" alt="이미지" class="img1">
             <thead>
               <tr>
                 <th>가격</th>
@@ -482,13 +593,13 @@
         </table> 
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 <div id="page3" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page0" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아3</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -560,13 +671,13 @@
         </ul>
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 <div id="page31" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page3" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아3</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -624,13 +735,13 @@
         </table> 
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 <div id="page4" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page0" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page4</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아4</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -674,13 +785,13 @@
         <a href="#page3" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">페이지3</a>
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 <div id="page5" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page0" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page5</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아5</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -752,13 +863,13 @@
         </div>
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 <div id="page51" data-role="page" class="ui-page ui-page-theme-a">
     <header data-role="header" class="ui-header" data-theme="b">
         <a href="#page5" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-left" data-role="button" role="button">Back To Page</a>
-        <h1 class="ui-title" role="heading">sub Page3</h1>
+        <h1 class="ui-title" role="heading">나이키 코리아3</h1>
         <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
             <ul class="ui-grid-d">
                 <li class="ui-block-a">
@@ -817,7 +928,7 @@
         </table> 
     </div>
     <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
-        <h3>여기는 푸터입니다.</h3>
+        <h3>나이키 코리아</h3>
     </footer>
 </div>
 </body>
